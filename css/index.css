@@ -12,19 +12,18 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
-a {
+li a {
     text-decoration: none;
     color: #999;
 }
-a:hover {
+li a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
-    font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
@@ -33,11 +32,12 @@ footer {
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+.blurb{
+    width:40%;
+    border:1px black solid;
+    padding:5px;
 }
 
-ul.posts li {
-    list-style: none;
+.blurb h2{
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
