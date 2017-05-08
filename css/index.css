@@ -1,14 +1,32 @@
+@font-face{
+	font-family:header1;
+	src:url(../fonts/sq.ttf);
+}
+@font-face{
+	font-family:nav;
+	src:url(../fonts/co.ttf);
+	}
+
+h1{
+	font-family:header1;
+	font-size: 450%;
+	margin:20px;
+	
+}
 body {
     margin: 60px auto;
+	margin-top:30px;
     width: 70%;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+nav ul{
+    font-family:nav;
     padding: 0px;
     list-style: none;
     font-weight: bold;
+	font-size:150%;
+	margin-bottom:0px;
 }
-nav ul li, footer ul li {
+nav ul li{
     display: inline;
     margin-right: 20px;
 }
@@ -17,27 +35,37 @@ li a {
     color: #999;
 }
 li a:hover {
-    text-decoration: underline;
+    color:#494949;
 }
-h1 {
-    font-size: 2em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
+
 p {
-    line-height: 1.4em;
+    line-height: 140%;
     color: #333;
 }
 footer {
     border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    font-size: 80%;
 }
-
-.blurb{
-    width:40%;
-    border:1px black solid;
-    padding:5px;
+nav{
+	padding-bottom:3%;
+	border-bottom:2px #494949 solid;
 }
-
-.blurb h2{
+body{
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+aside{
+	width:15%;
+	float:right;
+	border-left:2px #494949 solid;
+	margin-top:2%;
+	padding-left:2%;
+}
+aside h4{
+	font-family:nav;
+	font-size:120%;
+	margin:2%;
+}
+
+
+
+

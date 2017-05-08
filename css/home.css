@@ -1,0 +1,59 @@
+@font-face{
+	font-family:header1;
+	src:url(../fonts/sq.ttf);
+}
+@font-face{
+	font-family:nav;
+	src:url(../fonts/co.ttf);
+	}
+
+h1{
+	font-family:header1;
+	font-size: 510%;
+	margin:20px;
+	color:#b3b3b3;
+	
+}
+nav ul{
+    font-family:nav;
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+	font-size:150%;
+	margin-bottom:0px;
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+li a {
+    text-decoration: none;
+    color: #999;
+}
+li a:hover {
+    color:#494949;
+}
+.content {
+	text-align:center;
+    margin: 0 auto;
+	margin-top:30px;
+}
+.content h1{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+}
+
+.content nav{
+	text-align:center; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+    background: url(../images/back.jpg) no-repeat center fixed; 
+    background-size: cover;
+}
