@@ -90,6 +90,10 @@ aside ul{
 	padding-left:25px;
 	margin-bottom:0;
 }
+aside li{
+	padding-top:1px;
+	font-size:90%;
+}
 .subtitle{
 	font-family:nav;
 	padding-top:2%;
