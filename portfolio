@@ -1,0 +1,14 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="0">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="664" startPos="785" endPos="785" selMode="0" lang="HTML" encoding="-1" filename="H:\My Documents\swatson12.github.io\index.html" backupFilePath="" originalFileLastModifTimestamp="1496119807" />
+        </mainView>
+        <subView activeIndex="3">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="252" endPos="3164" selMode="0" lang="HTML" encoding="-1" filename="H:\My Documents\swatson12.github.io\project.html" backupFilePath="" originalFileLastModifTimestamp="1496118737" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="H:\My Documents\swatson12.github.io\softwareEng.html" backupFilePath="" originalFileLastModifTimestamp="1496184524" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="4760" startPos="250" endPos="250" selMode="0" lang="HTML" encoding="-1" filename="H:\My Documents\swatson12.github.io\about.html" backupFilePath="" originalFileLastModifTimestamp="1496118736" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="512" startPos="0" endPos="0" selMode="0" lang="CSS" encoding="-1" filename="H:\My Documents\swatson12.github.io\css\home.css" backupFilePath="" originalFileLastModifTimestamp="1496118736" />
+            <File firstVisibleLine="3" xOffset="0" scrollWidth="1" startPos="643" endPos="643" selMode="0" lang="CSS" encoding="-1" filename="H:\My Documents\swatson12.github.io\css\index.css" backupFilePath="" originalFileLastModifTimestamp="1496118736" />
+        </subView>
+    </Session>
+</NotepadPlus>
