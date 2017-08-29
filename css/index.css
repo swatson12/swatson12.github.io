@@ -125,3 +125,53 @@ aside li{
 	padding-left:2%;
 	padding-right:2%;
 }
+
+.content video, p .p, .content audio{
+	margin-left:20%;
+	width:60%;
+	padding-bottom:3%;
+	border-bottom:2px #494949 solid;
+}
+.p{
+	text-align:center;
+	margin-left:20%;
+	width:60%;
+	padding-bottom:2%;
+	border-bottom:2px #494949 solid;
+}
+.content audio{
+	padding-top:2%;
+}
+.p ul{
+	text-align:center;
+	border-bottom:0;
+	margin-left:0;
+	width:inherit;
+	margin-left:30%;
+	margin-bottom:0;
+}
+.p li{
+	text-align:left;
+}
+.p h4{
+font-family:nav;
+font-size:180%;
+margin-bottom:0;
+margin-top:2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
