@@ -50,6 +50,36 @@ nav ul li{
     display: inline;
     margin-right: 20px;
 }
+
+
+.dropitems{
+	display:none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown{
+	display:inline-block;
+	cursor: pointer;
+}
+
+.dropitems a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropitems a:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown:hover .dropitems {
+	display:block;
+}
+
 li a , .content .about .subtitle a{
     text-decoration: none;
     color: #999;
@@ -119,11 +149,11 @@ aside li{
 	
 }
 
+
 .story{
 	width:45%;
 	float:right;
 	border-right:2px #494949 solid;
-	padding-left:2%;
 	padding-right:2%;
 }
 	
