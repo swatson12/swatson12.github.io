@@ -102,6 +102,16 @@ aside li{
 	padding-bottom:2%;
 	border-bottom:2px #494949 solid;
 }
+
+.line {
+	font-family:nav;
+	padding-top:0;
+	margin-top:0;
+	font-size:120%;
+	padding-bottom:2%;
+	border-bottom:2px #494949 solid;
+}
+
 .story h3, .about h3{
 	font-family:nav;
 	font-size:200%;
@@ -134,11 +144,10 @@ aside li{
 	border-bottom:2px #494949 solid;
 }
 .p{
-	text-align:center;
+	text-align:justify;
 	margin-left:20%;
 	width:60%;
-	padding-bottom:2%;
-	/*border-bottom:2px #494949 solid;*/
+	/*padding-bottom:2%;*/
 }
 .content audio{
 	padding-top:2%;
@@ -155,10 +164,10 @@ aside li{
 	text-align:left;
 }
 .p h4{
-font-family:nav;
-font-size:180%;
-margin-bottom:0;
-margin-top:2%;
+	font-family:nav;
+	font-size:180%;
+	margin-bottom:0;
+	margin-top:2%;
 }
 
 .content .story, .content .about{
