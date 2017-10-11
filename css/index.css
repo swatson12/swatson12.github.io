@@ -78,13 +78,16 @@ nav ul li{
     display: block;
 }
 
-.dropitems a:hover {
+.dropitems a:hover{
 	background-color: #f1f1f1;
 }
-
 .dropdown:hover .dropitems{
-	display:block; 
+	display:initial; 
+	visibility: visible;
+	color:#494949;
+	
 }
+
 
 
 li a , .content .about .subtitle a{
@@ -292,7 +295,9 @@ aside li{
 @media only screen and (max-width: 700px){
     .modal-content {
         width: 100%;
-    }
+	}
+	
+	
 }
 
 
