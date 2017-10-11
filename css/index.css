@@ -7,15 +7,18 @@
 	src:url(../fonts/dk.otf);
 	}
 
-h1{
+.top-header{
 	font-family:header1;
 	font-size: 450%;
 	margin:20px;
+	margin-left:0;
+	padding: 2%;
+	border-top:2px #494949 solid;
 }
 .avatar{ 
 	border-radius: 50% 50%;
 	max-width:150px;
-	height:150px;
+	min-height:150px;
 	float:right;
 	margin-top:-10px;
 	margin-right:10%;
@@ -24,6 +27,7 @@ h1{
 	font-family:header1;
 	font-size: 350%;
 	text-align:center;
+	margin:2%;
 }
 .title{
 	width:80%;
@@ -58,7 +62,7 @@ nav ul li{
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+	z-index: 1;
 }
 .dropdown{
 	display:inline-block;
@@ -66,25 +70,28 @@ nav ul li{
 }
 
 .dropitems a {
-    color: black;
-    padding: 12px 16px;
+	color: black;
+	font-family: nav;
+	font-size: 80%;
+    padding: 10px;
     text-decoration: none;
     display: block;
 }
 
 .dropitems a:hover {
-	background-color: #f1f1f1
+	background-color: #f1f1f1;
 }
 
-.dropdown:hover .dropitems {
-	display:block;
+.dropdown:hover .dropitems{
+	display:block; 
 }
+
 
 li a , .content .about .subtitle a{
     text-decoration: none;
     color: #999;
 }
-li a:hover, .content .about .subtitle a:hover{
+li a:hover, .content .about .subtitle a:hover, .drop-link:hover {
     color:#494949;
 }
 
@@ -109,16 +116,18 @@ aside{
 	border-left:2px #494949 solid;
 	margin-top:2%;
 	padding-left:2%;
+	padding-bottom: 2%;
 	display:inline;
 }
 aside h4{
 	font-family:nav;
-	font-size:120%;
+	font-size:130%;
 	margin:2%;
 }
 aside ul{
 	padding-left:25px;
 	margin-bottom:0;
+	margin-top:2%;
 }
 aside li{
 	padding-top:1px;
@@ -203,13 +212,88 @@ aside li{
 .content .story, .content .about{
 	margin-bottom:5%;
 }
+#uikit{
+	width: 45%;
+	margin-left: 25%;
+	margin-top: 3%;
+    cursor: pointer;
+    transition: 0.3s;
 
+}
 
+#uikit:hover{
+	opacity: 0.7;
+}
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
 
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
 
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
 
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
 
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
 
 
 

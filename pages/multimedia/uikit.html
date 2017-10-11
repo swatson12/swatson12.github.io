@@ -7,8 +7,7 @@
   </head>
 
   <body>
-	<img class="avatar" src="../../images/back.jpg" alt="avatar">
-	<h1>Sam Watson - Online Portfolio</h1>
+	<h1 class="top-header">Sam Watson - Online Portfolio</h1>
 	<nav>
 	  <ul>
 		<li><a href="../main/index.html">Home</a></li>
@@ -29,16 +28,46 @@
 	<aside>
 	<h4>Useful Links</h4>
 	<ul>
-		<li><a href="soundscape.html">Soundscape</a></li>
-		<li><a href="https://drive.google.com/open?id=0BzZqlKCDNdEgcHAyNnFJQ2swb3M" target="_blank">Link to project files</a></li>
-		<li><a href="">link</a></li>
-		<li><a href="">link</a></li>
+			<li><a href="https://drive.google.com/drive/folders/0BzZqlKCDNdEgcHAyNnFJQ2swb3M?usp=sharing" target="_blank">UI Kit files</a></li>
+	</br></br>
 	</ul>
 	</aside>
 	<section class="title">
 	<h1>UI Kit</h1>
-	</section>
+	</section><p class="subtitle">Otago Polytechnic Bachelor of IT - Multimedia Development - Semester 2 2017</p>
 	<section class="content">
-	
+		<img src="https://lh5.googleusercontent.com/8kSdLwdsIMZgWpan-ohHbklQQ7ZV9Of6gBaSmDr7lq9xM-kZvr9GtefK2oa5A-0k4eCl5invRjUhcA4=w1600-h770-rw" id="uikit" alt="Completed UI Kit"/>
+		<div class="modal" id="js-modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="img-zoom"/>
+			<div id="caption"></div>
+		</div>
+
+
+
+
+
+
+
+
+		<script>
+			//example of making photo expand https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+			var modal = document.getElementById("js-modal");
+			var img = document.getElementById("uikit");
+			var modal_img = document.getElementById("img-zoom");
+			var caption=document.getElementById("caption");
+
+			img.onclick=function(){
+				modal.style.display="block";
+				modal_img.src=this.src;
+				caption.innerHTML=this.alt;
+			}
+
+			var span=document.getElementsByClassName("close")[0];
+			span.onclick=function(){
+				modal.style.display="none";
+			}
+
+		</script>
   </body>
 </html>
