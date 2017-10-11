@@ -72,10 +72,11 @@ body{
         transform: translate(-50%, -150%);
         background: none;
         font-family:header1;
-        font-size: 710%;
+        font-size: 810%;
         margin:20px;
         color:#494949;
         text-align: center;
+        font-weight: bold;
       }
       
       nav{
@@ -84,6 +85,6 @@ body{
           top: 40%;
           left: 50%;
           transform: translate(-50%, -50%);
-          font-size:350%;
+          font-size:450%;
       }
 }
