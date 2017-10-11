@@ -63,3 +63,26 @@ body{
     background: url(../images/back4.jpg) no-repeat  fixed; 
     background-size: cover;
 }
+
+@media only screen and (max-width:1000px) {
+    h1{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -150%);
+        background: none;
+        font-family:header1;
+        font-size: 510%;
+        margin:20px;
+        color:#494949;
+        text-align: center;
+      }
+      
+      nav{
+          text-align:center; 
+          position: fixed;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+}
