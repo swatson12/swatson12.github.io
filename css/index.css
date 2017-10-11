@@ -293,12 +293,17 @@ aside li{
     text-decoration: none;
     cursor: pointer;
 }
-
+.m{
+	display: none;
+}
 @media only screen and (max-width: 1000px){
     .modal-content {
         width: 100%;
 	}
-	nav a:not(:first-child){display: none;}
+	nav .m{
+		display:inline-block;
+	}
+	nav a{display: none;}
 	nav a.icon{
 		float:right;
 		display: block;
@@ -317,9 +322,6 @@ aside li{
 	}
 	nav.n .dropdown, nav .dropitems{
 		display: none;
-	}
-	nav.n.responsive .dropdown:active .dropitems{
-		display: block !important;
 	}
 }
 

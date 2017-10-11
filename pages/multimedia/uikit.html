@@ -9,11 +9,12 @@
   <body>
 	<h1 class="top-header">Sam Watson - Online Portfolio</h1>
 	<nav class="n" id="nav">
+		<span class="m" onclick="responsive_menu()">Menu</span>
 		<a href="../main/index.html">Home</a>
 		<a href="../soft en/softwareEng.html">Software Engineering </a>
-		<div class="dropdown">
-			<a class="drop-link">Multimedia Development Portfolio</a></li> 	
-				<div class="dropitems">
+		<div class="dropdown" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Multimedia Development Portfolio</a></li> 	
+				<div class="dropitems" id="dropitems">
 					<a href="uikit.html">UI Kit</a>
 					<a href="soundscape.html">Soundscape</a>
 					<a href="lifehack.html">Life Hack Video</a>
@@ -79,12 +80,14 @@
 				} else {
 						x.className = "n";
 				}
-				('.n > .dropdown').click(function(){
-					(this).find('> dropitems.a ').show();
-				}, function(){
-					(this).find('> dropitems.a ').hide();
-				});
 			}
+			function dropitems(){
+				var x=document.getElementById("dropitems");
+			/*	if(x.classList.contains(".dropitems")){*/
+					console.log(x.classList.contains("dropitems"));
+				//}
+			}
+
 		</script>
   </body>
 </html>
