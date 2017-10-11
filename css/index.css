@@ -318,8 +318,8 @@ aside li{
 	nav.n .dropdown, nav .dropitems{
 		display: none;
 	}
-	nav.n.responsive .dropdown:hover{
-		height:auto!important;
+	nav.n.responsive .dropdown:hover .dropitems{
+		display: block !important;
 	}
 }
 
