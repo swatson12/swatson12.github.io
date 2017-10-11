@@ -33,10 +33,6 @@ li a:hover {
     top:50%;
     position: fixed;
 }
-/*.content h1, .content nav{
-    background-color:rgba(250, 248, 248, 0.5);
-    padding:1%;
-}*/
 h1{
   position: fixed;
   top: 50%;
