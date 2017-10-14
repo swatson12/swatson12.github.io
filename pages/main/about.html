@@ -7,25 +7,32 @@
   </head>
 
   <body>
-	<!--<img class="avatar" src="../../images/back2.jpg" alt="avatar">-->
 	<h1 class="top-header">Sam Watson - Online Portfolio</h1>
-	<nav>
-	  <ul>
-		<li><a href="../main/index.html">Home</a></li>
-		<li><a href="../soft en/softwareEng.html">Software Engineering </a></li>
-		<div class="dropdown">
-		<li><a class="drop-link">Multimedia Development Portfolio</a></li> 	
-			<div class="dropitems">
-				<a href="../multimedia/uikit.html">UI Kit</a>
-				<a href="../multimedia/soundscape.html">Soundscape</a>
-				<a href="../multimedia/lifehack.html">Life Hack Video</a>
-				<a href="../multimedia/3dmodel.html">3D Model</a>
-			</div></div>
-		<li><a href="../project/project1.html">Project 1 Portfolio</a></li>
-		<li><a href="../main/about.html">About</a></li>
-	  </ul>
+	<nav class="n" id="nav">
+		<span class="m" onclick="responsive_menu()">Menu</span>
+		<a href="../main/index.html">Home</a>
+		<a href="../soft en/softwareEng.html">Software Engineering </a>
+		<div class="dropdown" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Multimedia Development Portfolio</a></li> 	
+				<div class="dropitems" id="dropitems">
+					<a href="uikit.html">UI Kit</a>
+					<a href="soundscape.html">Soundscape</a>
+					<a href="lifehack.html">Life Hack Video</a>
+					<a href="3dmodel.html">3D Model</a>
+				</div>
+		</div>
+		<a href="../project/project1.html">Project 1 Portfolio</a>
+		<a href="../main/about.html">About</a>
+		<div class="dropdown useful" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Useful Links</a>
+			<div class="dropitems" id="dropitems">
+					<a href="">link</a>
+					<a href="">link</a>
+					<a href="">link</a>
+					<a href="">link</a>
+			</div>
+		</div>
 	</nav>
-	
 	<aside>
 	<h4>Useful Links</h4>
 	<ul>
@@ -51,6 +58,23 @@
 
 			Phasellus aliquam mattis ornare. Morbi vestibulum eget est vitae ullamcorper. Integer et metus semper quam tristique lobortis. Maecenas hendrerit neque quis justo auctor, quis sagittis tellus dignissim. Phasellus at ullamcorper leo, vitae tempor quam. Donec varius, odio placerat sodales bibendum, diam leo lacinia magna, a condimentum lacus nulla vitae nisi. Quisque sodales, risus in tristique vulputate, purus justo ultricies metus, at ullamcorper lacus felis at massa. Sed varius nunc a nunc varius, a gravida magna varius. Duis consequat erat sed mauris fringilla faucibus.</p>
 		</section>
-	
+	<script>
+		function responsive_menu() {
+				var x = document.getElementById("nav");
+				if (x.className === "n"||x.className==="dropdown") {
+					console.log(x.className);
+						x.className += " responsive";
+				} else {
+						x.className = "n";
+				}
+			}
+			function dropitems(){
+				var x=document.getElementById("dropitems");
+			/*	if(x.classList.contains(".dropitems")){*/
+					console.log(x.classList.contains("dropitems"));
+				//}
+			}
+		</script>
+
   </body>
 </html>

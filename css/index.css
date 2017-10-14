@@ -296,32 +296,71 @@ aside li{
 .m{
 	display: none;
 }
+
+.useful{
+	display: none;
+}
 @media only screen and (max-width: 1000px){
     .modal-content {
         width: 100%;
 	}
-	nav .m{
-		display:inline-block;
+	body{
+		width:70%;
 	}
-	nav a{display: none;}
-	nav a.icon{
-		float:right;
-		display: block;
+	nav .m, nav.responsive.useful{
+		display:inline;
+		text-align: left;	
 	}
-	nav.responsive{position: relative;}
+
+	.dropdown.useful{
+		margin-left:0;
+	}
+
+	nav a,nav span{
+		text-align: left;
+		display: none;
+		padding:3%;
+	}
+	nav a:active a:hover{
+		background-color: #999;
+	}
+	nav a.m{
+		text-align: left;
+	}
+	nav.responsive{
+		position: relative;
+		text-align: left;
+	}
+	nav, .title, .subtitle,.useful,.top-header, .story, .about{
+		width:80%;
+		margin:0 auto;
+		text-align: center;
+	}
 	nav.responsive .icon{
 		position: absolute;
 		top: 0;
 		right: 0;
 	}
-	
-	nav.responsive a, nav.n.responsive .dropdown{
+	nav.responsive a, nav.n.responsive .dropdown, nav.useful{
 		float: none;
 		display: block;
 		text-align: left;
 	}
 	nav.n .dropdown, nav .dropitems{
 		display: none;
+	}
+	aside{
+		display: none;
+	}
+
+
+	.story, .about{
+		padding-top:3%;
+		float:none;
+		border:0;
+	}
+	.story{
+		border-top:2px solid #494949;
 	}
 }
 

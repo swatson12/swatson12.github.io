@@ -9,7 +9,7 @@
   <body>
 	<h1 class="top-header">Sam Watson - Online Portfolio</h1>
 	<nav class="n" id="nav">
-		<span class="m" onclick="responsive_menu()">Menu</span>
+			<a class="m" onclick="responsive_menu()">&#9776; Menu</a>
 		<a href="../main/index.html">Home</a>
 		<a href="../soft en/softwareEng.html">Software Engineering </a>
 		<div class="dropdown" id="dropdown">
@@ -23,7 +23,15 @@
 		</div>
 		<a href="../project/project1.html">Project 1 Portfolio</a>
 		<a href="../main/about.html">About</a>
-		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsive_menu()">&#9776;</a>
+		<div class="dropdown useful" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Useful Links</a>
+			<div class="dropitems" id="dropitems">
+					<a href="">link</a>
+					<a href="">link</a>
+					<a href="">link</a>
+					<a href="">link</a>
+			</div>
+		</div>
 	</nav>
 	
 	<aside>
