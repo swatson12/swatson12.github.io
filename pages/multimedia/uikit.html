@@ -47,7 +47,7 @@
 		<div class="modal" id="js-modal">
 			<span class="close">&times;</span>
 			<img class="modal-content" id="img-zoom"/>
-			<div id="caption"></div>
+			<div id="caption1" class="caption"></div>
 		</div>
 		<section class="p"><br/><p>
 			For the UI Kit, I decided to base it off an app I'd already made that definitely could have the UI be developed a lot more. I spent a lot of time looking at other UI Kits on Google to get some inspiration to see how other apps and sites do their UI and what was sort of the latest style. </p>
@@ -55,10 +55,10 @@
 		<!--accordian list inspired by Josh Chin's project portfolio-->
 				<button class="acc-button">Planning</button>
 				<div class="panel"><p></p>
-						<img src="../../images/planning.JPG" id="planning" alt"Planning for UI Kit" title="Click to enlarge"/><div class="modal" id="js-modal">
+						<img src="../../images/planning.JPG" id="planning" alt="Planning for UI Kit" /><div class="modal" id="js-modal">
 							<span class="close">&times;</span>
 							<img class="modal-content" id="img-zoom"/>
-							<div id="caption"></div>
+							<div class="caption" id=caption2></div>
 						</div>
 						<p>When we were first given the project, the first thing I did was make a list of all the UI features the app needs and uses. From there I made some sketches of what I thought the interactive parts could look like. Doing this helped the process so much because it gave me a way to get every initial idea I had for the kit out of my head and somewhere physical. It also made an excellent reference point if I ever needed to refer back if I forgot what parts I needed to add</p>
 				</div>
@@ -94,13 +94,14 @@
 			var img1 = document.getElementById("uikit");
 			var img2 = document.getElementById("planning");
 			var modal_img = document.getElementById("img-zoom");
-			var caption=document.getElementById("caption");
+			var caption1=document.getElementById("caption1");
+			var caption2=document.getElementById("caption2");
 
-			function img_click(i){
+			function img_click(i,cap){
 				i.onclick=function(){
 					modal.style.display="block";
 					modal_img.src=this.src;
-					caption.innerHTML=this.alt;
+					cap.innerHTML=this.alt;
 					}
 			}
 
@@ -109,8 +110,8 @@
 				modal.style.display="none";
 			}
 
-			img_click(img1);
-			img_click(img2);
+			img_click(img1,caption1);
+			img_click(img2,caption2);
 
 //making the menu responsive
 			function responsive_menu() {

@@ -250,7 +250,7 @@ aside li{
     max-width: 700px;
 }
 
-#caption {
+.caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -261,7 +261,7 @@ aside li{
     height: 150px;
 }
 
-.modal-content, #caption {    
+.modal-content, .caption {    
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -313,7 +313,7 @@ aside li{
 	transition: 0.4s;
 	font-family:nav;
  }
- 
+
  button.acc-button.active, button.acc-button.hover{
 	background-color: #ccc;
  }
