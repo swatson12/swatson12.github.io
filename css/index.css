@@ -337,7 +337,7 @@ aside li{
  }
 
 
-/*----------| to make responsive |---------------------------------------------------------------*/
+/*---------------------------------------------------| to make responsive |---------------------------------------------------------------*/
 @media only screen and (max-width: 1000px){
     .modal-content {
         width: 90%;
@@ -345,36 +345,35 @@ aside li{
 	body{
 		width:100%;
 		border:none;
-		font-size:150%;
+		font-size:200%;
 	}
-	nav .m, nav.responsive.useful{
+	a.m, nav.responsive.useful{
 		display:inline;
 		text-align: left;	
 	}
 	.top-header{
 		border:none;
 		border-bottom: 2px #494949 solid;
+		margin-bottom:2%
 	}
 
 	.dropdown.useful{
 		margin-left:0;
 	}
 
-	nav .m{
-		margin-top:3%;
-	}
-
 	nav a,nav span{
 		text-align: left;
 		display: none;
-		padding:3%;
+		padding:2%;
 	}
+
 	nav a:active a:hover{
 		background-color: #999;
 	}
-	nav .m{
+    .m{
 		text-align: left;
 		cursor:pointer;
+		padding-top:20px;
 	}
 	nav.responsive{
 		position: relative;
@@ -397,7 +396,6 @@ aside li{
 	aside{
 		display: none;
 	}
-
 
 	.story, .about{
 		padding-top:3%;
@@ -422,6 +420,9 @@ aside li{
 		width:90%
 	}
 
+	nav{
+		padding-top: 2%;
+	}
 }
 
 
