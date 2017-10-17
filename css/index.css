@@ -340,18 +340,27 @@ aside li{
 /*----------| to make responsive |---------------------------------------------------------------*/
 @media only screen and (max-width: 1000px){
     .modal-content {
-        width: 100%;
+        width: 90%;
 	}
 	body{
-		width:80%;
+		width:100%;
+		border:none;
 	}
 	nav .m, nav.responsive.useful{
 		display:inline;
 		text-align: left;	
 	}
+	.top-header{
+		border:none;
+		border-bottom: 2px #494949 solid;
+	}
 
 	.dropdown.useful{
 		margin-left:0;
+	}
+
+	nav .m{
+		padding-top:2%;
 	}
 
 	nav a,nav span{
@@ -371,7 +380,7 @@ aside li{
 		text-align: left;
 	}
 	nav, .title, .subtitle,.useful,.top-header, .story, .about{
-		width:90%;
+		width:100%;
 		margin:0 auto;
 		text-align: center;
 	}
@@ -404,6 +413,12 @@ aside li{
 	.p .acc-button{
 		
 		font-size: 125%;
+	}
+	.content{
+		width:100%;
+	}
+	.p{
+		width:80%
 	}
 
 }
