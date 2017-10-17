@@ -373,7 +373,6 @@ aside li{
     .m{
 		text-align: left;
 		cursor:pointer;
-		padding-top:20px;
 	}
 	nav.responsive{
 		position: relative;
@@ -421,7 +420,7 @@ aside li{
 	}
 
 	nav{
-		padding-top: 2%;
+		padding-top: 5%;
 	}
 }
 
