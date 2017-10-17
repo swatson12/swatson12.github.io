@@ -345,6 +345,7 @@ aside li{
 	body{
 		width:100%;
 		border:none;
+		font-size:150%;
 	}
 	nav .m, nav.responsive.useful{
 		display:inline;
@@ -360,7 +361,7 @@ aside li{
 	}
 
 	nav .m{
-		padding-top:2%;
+		margin-top:3%;
 	}
 
 	nav a,nav span{
@@ -418,7 +419,7 @@ aside li{
 		width:100%;
 	}
 	.p{
-		width:80%
+		width:90%
 	}
 
 }
