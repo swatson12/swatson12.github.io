@@ -9,7 +9,7 @@
   <body>
 	<h1 class="top-header">Sam Watson - Online Portfolio</h1>
 	<nav class="n" id="nav">
-			<a class="m" onclick="responsive_menu()">&#9776; Menu</a>
+			<a class="m" onclick="responsive_menu()" >&#9776; Menu</a>
 		<a href="../main/index.html">Home</a>
 		<a href="../soft en/softwareEng.html">Software Engineering </a>
 		<div class="dropdown" id="dropdown">
@@ -42,14 +42,39 @@
 	<h1>UI Kit</h1>
 	</section><p class="subtitle">Otago Polytechnic Bachelor of IT - Multimedia Development - Semester 2 2017</p>
 	<section class="content">
-		<img src="../../images/uikit.jpg" id="uikit" alt="Completed UI Kit"/>
+		<img src="../../images/uikit.jpg" id="uikit" alt="Completed UI Kit" title="Click to enlarge"/>
 		<div class="modal" id="js-modal">
 			<span class="close">&times;</span>
 			<img class="modal-content" id="img-zoom"/>
 			<div id="caption"></div>
 		</div>
 		<section class="p"><br/>
-			For the UI Kit, I decided to base it off an app I'd already made that definitely could have the UI be developed a lot more. I spent a lot of time looking at other UI Kits on Google to get some inspiration to see how other apps and sites do their UI and what was sort of the latest style.
+			For the UI Kit, I decided to base it off an app I'd already made that definitely could have the UI be developed a lot more. I spent a lot of time looking at other UI Kits on Google to get some inspiration to see how other apps and sites do their UI and what was sort of the latest style. 
+		<br/><br/><br/>
+				<button class="acc-button">Planning</button>
+				<div class="panel"><p>hi</p>
+						<img src="../../images/planning.jpg" id="planning" alt"Planning for UI Kit"/><div class="modal" id="js-modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img-zoom"/>
+							<div id="caption"></div>
+						</div>
+						<p>more content</p>
+				</div>
+
+				<button class="acc-button">Design</button>
+				<div class="panel">
+					<p>some content here yo</p>
+				</div>
+
+				<button class="acc-button">Other stuff</button>
+				<div class="panel">
+					<p>some content here yo</p>
+				</div>
+
+				<button class="acc-button">some more stuff</button>
+				<div class="panel">
+					<p>some content here yo</p>
+				</div>
 		</section>
 
 
@@ -61,15 +86,19 @@
 
 		<script>
 			//example of making photo expand https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+			//making the images zoom
 			var modal = document.getElementById("js-modal");
-			var img = document.getElementById("uikit");
+			var img1 = document.getElementById("uikit");
+			var img2 = document.getElementById("planning");
 			var modal_img = document.getElementById("img-zoom");
 			var caption=document.getElementById("caption");
 
-			img.onclick=function(){
-				modal.style.display="block";
-				modal_img.src=this.src;
-				caption.innerHTML=this.alt;
+			function img_click(i){
+				i.onclick=function(){
+					modal.style.display="block";
+					modal_img.src=this.src;
+					caption.innerHTML=this.alt;
+					}
 			}
 
 			var span=document.getElementsByClassName("close")[0];
@@ -77,6 +106,10 @@
 				modal.style.display="none";
 			}
 
+			img_click(img1);
+			img_click(img2);
+
+//making the menu responsive
 			function responsive_menu() {
 				var x = document.getElementById("nav");
 				if (x.className === "n"||x.className==="dropdown") {
@@ -88,9 +121,26 @@
 			}
 			function dropitems(){
 				var x=document.getElementById("dropitems");
-			/*	if(x.classList.contains(".dropitems")){*/
 					console.log(x.classList.contains("dropitems"));
-				//}
+			}
+
+//accordian list
+// example at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol
+			var acc=document.getElementsByClassName("acc-button");
+			var i;
+
+			for(i=0;i<acc.length;i++){
+				acc[i].onclick=function(){
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if(panel.style.maxHeight){
+						panel.style.maxHeight=null;
+					}
+					else{
+						panel.style.maxHeight=panel.scrollHeight+"px";
+					}
+
+				}
 			}
 
 		</script>
