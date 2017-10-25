@@ -180,9 +180,9 @@ aside li{
 	padding-right:2%;
 }
 
-
-.content video, p .p, .content audio{
-	margin:0 auto;
+ p .p, .content audio{
+	margin:auto 0;
+	margin-left:20%;
 	width:60%;
 	padding-bottom:3%;
 	border-bottom:2px #494949 solid;
@@ -339,7 +339,7 @@ aside li{
 	 overflow-y:auto;
  }
 
-.planning {
+.img-acc {
 	float: left;
 	clear: right;
 	cursor: pointer;
@@ -347,7 +347,28 @@ aside li{
 	padding-right:3%;
 	padding-bottom:2%;
 }
+.slidebtn{
+	float: left;
+	clear:both;
+	background-color: black;
+	color:white;
+	outline:none;
+	border:none;
+	margin-right:3%;
+}
 
+.rect{
+	background-color: purple;
+	margin:2px;
+	display: inline-block;
+	width:50px;
+	height:150px;
+	transition: all .2s ease-in-out;
+}
+.rect:active{
+	background-color:lavender;
+	transform: scale(1.1);
+}
 
 /*---------------------------------------------------| to make responsive |---------------------------------------------------------------*/
 @media only screen and (max-width: 1000px){
@@ -408,10 +429,15 @@ aside li{
 	}
 
 	.story, .about{
-		padding-top:3%;
+		/*padding-top:3%;*/
 		float:none;
 		border:0;
 	}
+
+	.story li, .about li{
+		list-style: none;
+	}
+
 	.story{
 		border-top:2px solid #494949;
 	}
@@ -434,6 +460,17 @@ aside li{
 		padding-top: 3%;
 		border-top: 2px solid #494949;
 		margin-top:2%;
+	}
+	.content audio{
+		width:90%;
+		margin-left: 5%;
+	}
+	.line{
+		margin-bottom:0;
+	}
+
+	.h3head{
+		margin-top:3% !important;
 	}
 }
 
