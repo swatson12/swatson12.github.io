@@ -47,6 +47,7 @@
 		<div class="modal" id="js-modal">
 			<span class="close">&times;</span>
 			<img class="modal-content" id="img-zoom"/>
+			<div class="caption">Completed UI Kit</div>
 		</div>
 		<section class="p"><br/><p>
 			For the UI Kit, I decided to base it off an app I'd already made that definitely could have the UI be developed a lot more. I spent a lot of time looking at other UI Kits on Google to get some inspiration to see how other apps and sites do their UI and what was sort of the latest style. </p>
@@ -54,24 +55,17 @@
 		<!--accordian list inspired by Josh Chin's project portfolio-->
 				<button class="acc-button">Planning</button>
 				<div class="panel"><p></p>
-						<img src="../../images/planning.JPG" id="planning" alt="Planning for UI Kit" class="img-acc" /><div class="modal" id="js-modal">
+						<img src="../../images/planning.JPG" id="planning" alt="Planning for UI Kit" /><div class="modal" id="js-modal">
 							<span class="close">&times;</span>
 							<img class="modal-content" id="img-zoom"/>
+							<div class="caption">Planning for UI Kit</div>
 						</div>
 						<p>When we were first given the project, the first thing I did was make a list of all the UI features the app needs and uses. From there I made some sketches of what I thought the interactive parts could look like. Doing this helped the process so much because it gave me a way to get every initial idea I had for the kit out of my head and somewhere physical. It also made an excellent reference point if I ever needed to refer back if I forgot what parts I needed to add</p>
 				</div>
 
 				<button class="acc-button">Design</button>
-				<div class="panel"><P></P>
-					<button class="slidebtn" onclick="plusDivs(-1)">&#10094;</button>
-					<button class="slidebtn" onclick="plusDivs(1)">&#10095;</button>
-						<img src="../../images/buttonpsdss.JPG"  id="btnpsd" class="img-acc slide"/>
-						<img src="../../images/buttonideas.JPG"   id="btnidea" class="img-acc slide"/>
-						<img src="../../images/colours.JPG"   id="colours" class="img-acc slide"/>
-						<div class="modal" id="js-modal">
-								<span class="close">&times;</span>
-								<img class="modal-content" id="img-zoom"/>
-						</div>
+				<div class="panel">
+					<p></p>
 					<p>When I was designing the UI kit, I spent a lot of time trying different styles and colours for the buttons. I used Photoshop a lot when designing the buttons, trying out different gradients and colours. I didn't end up using any of the buttons I made on Photoshop, sticking with a flat theme, but it was really interesting to make the buttons and see how they might have worked. A lot of trial and error went into the buttons and I'm really happy with the way the ended up turing out.</p> <p>I decided to stick with the blue and yellow theme that Squash Otago uses, just to keep it consistent and to tie it back to Squash Otago. Using shades based directly off the Squash Otago blue and yellow made it easy to keep a theme happening and without using way too much bright yellow and blue. I used the <a href='https://www.w3schools.com/colors/colors_picker.asp'>colour picker</a> on W3Schools to get shades and variants on the blue and yellow.  </p>
 				</div>
 
@@ -100,9 +94,6 @@
 			var modal = document.getElementById("js-modal");
 			var img1 = document.getElementById("uikit");
 			var img2 = document.getElementById("planning");
-			var img3 = document.getElementById("btnpsd");
-			var img4 = document.getElementById("btnidea");
-			var img5 = document.getElementById("colours");
 			var modal_img = document.getElementById("img-zoom");
 
 			function img_click(i){
@@ -119,9 +110,6 @@
 
 			img_click(img1);
 			img_click(img2);
-			img_click(img3);
-			img_click(img4);
-			img_click(img5);
 
 //making the menu responsive
 			function responsive_menu() {
@@ -156,25 +144,6 @@
 
 				}
 			}
-
-			//slideshow images from https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self
-				var slideIndex = 1;
-				showDivs(slideIndex);
-
-				function plusDivs(n) {
-					showDivs(slideIndex += n);
-				}
-
-				function showDivs(n) {
-					var i;
-					var x = document.getElementsByClassName("slide");
-					if (n > x.length) {slideIndex = 1}    
-					if (n < 1) {slideIndex = x.length}
-					for (i = 0; i < x.length; i++) {
-						x[i].style.display = "none";  
-					}
-					x[slideIndex-1].style.display = "block";  
-				}
 
 		</script>
   </body>

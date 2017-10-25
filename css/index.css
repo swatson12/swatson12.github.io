@@ -339,13 +339,22 @@ aside li{
 	 overflow-y:auto;
  }
 
-#planning {
+.img-acc {
 	float: left;
 	clear: right;
 	cursor: pointer;
 	width:45%;
 	padding-right:3%;
 	padding-bottom:2%;
+}
+.slidebtn{
+	float: left;
+	clear:both;
+	background-color: black;
+	color:white;
+	outline:none;
+	border:none;
+	margin-right:3%;
 }
 
 
