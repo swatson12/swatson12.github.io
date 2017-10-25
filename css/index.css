@@ -226,7 +226,7 @@ aside li{
 
 }
 
-#uikit:hover, #planning:hover{
+#uikit:hover, .planning:hover{
 	opacity: 0.7;
 }
 
@@ -339,7 +339,7 @@ aside li{
 	 overflow-y:auto;
  }
 
-#planning {
+.planning {
 	float: left;
 	clear: right;
 	cursor: pointer;

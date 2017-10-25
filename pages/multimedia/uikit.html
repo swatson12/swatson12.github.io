@@ -55,7 +55,8 @@
 		<!--accordian list inspired by Josh Chin's project portfolio-->
 				<button class="acc-button">Planning</button>
 				<div class="panel"><p></p>
-						<img src="../../images/planning.JPG" id="planning" alt="Planning for UI Kit" /><div class="modal" id="js-modal">
+						<img src="../../images/planning.JPG" id="planning" class="planning" alt="Planning for UI Kit" />
+						<div class="modal" id="js-modal">
 							<span class="close">&times;</span>
 							<img class="modal-content" id="img-zoom"/>
 							<div class="caption" id=caption2></div>
@@ -64,8 +65,15 @@
 				</div>
 
 				<button class="acc-button">Design</button>
-				<div class="panel">
-					<p>When I was designing the UI kit, I spent a lot of time trying different styles and colours for the buttons. I used Photoshop a lot when designing the buttons, trying out different gradients and colours. I didn't end up using any of the buttons I made on Photoshop, sticking with a flat theme, but it was really interesting to make the buttons and see how they might have worked. A lot of trial and error went into the buttons and I'm really happy with the way the ended up turing out.</p> <p>I decided to stick with the blue and yellow theme that Squash Otago uses, just to keep it consistent and to tie it back to Squash Otago. Using shades based directly off the Squash Otago blue and yellow made it easy to keep a theme happening and without using way too much bright yellow and blue. I used the <a href='https://www.w3schools.com/colors/colors_picker.asp'>colour picker</a> on W3Schools to get shades and variants on the blue and yellow.  </p>
+				<div class="panel"><p></p>
+					<img src="../../images/buttonpsdss.jpg" id="btnplan" class="planning" alt="Button planning"/>
+					<div class="modal" id="js-modal">
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img-zoom"/>
+						<div class="caption" id=caption3></div>
+					</div>
+					<p>When I was designing the UI kit, I spent a lot of time trying different styles and colours for the buttons. I used Photoshop a lot when designing the buttons, trying out different gradients, shadows and colours. I didn't end up using any of the buttons I made on Photoshop, sticking with a flat theme, but it was really interesting to make the buttons and see how they might have worked. A lot of trial and error went into the buttons and I'm really happy with the way the ended up turing out.</p> 
+					<p>I decided to stick with the blue and yellow theme that Squash Otago uses, just to keep it consistent and to tie it back to Squash Otago. Using shades based directly off the Squash Otago blue and yellow made it easy to keep a theme happening and without using way too much bright yellow and blue. I used the <a href='https://www.w3schools.com/colors/colors_picker.asp'>colour picker</a> on W3Schools to get shades and variants on the blue and yellow.  </p>
 				</div>
 
 				<button class="acc-button">Using Illustrator</button>
@@ -93,9 +101,11 @@
 			var modal = document.getElementById("js-modal");
 			var img1 = document.getElementById("uikit");
 			var img2 = document.getElementById("planning");
+			var img3 = document.getElementById('btnplan');
 			var modal_img = document.getElementById("img-zoom");
 			var caption1=document.getElementById("caption1");
 			var caption2=document.getElementById("caption2");
+			var caption3=document.getElementById("caption3");
 
 			function img_click(i,cap){
 				i.onclick=function(){
@@ -112,6 +122,7 @@
 
 			img_click(img1,caption1);
 			img_click(img2,caption2);
+			img_click(img3,caption3);
 
 //making the menu responsive
 			function responsive_menu() {
