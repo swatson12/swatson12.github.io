@@ -78,8 +78,13 @@
 				</div>
 
 				<button class="acc-button">Using Illustrator</button>
-				<div class="panel">
-					<p>some content here yo</p>
+				<div class="panel"><p></p>
+					<img src="../../images/artboards.JPG" id="art" class="img-acc"/>
+					<div class="modal" id="js-modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img-zoom"/>
+					</div>
+					<p>I decided to use Illustrator to design the kit, primarily because Illustrator is way easier to use to make shapes and custom designs. I wanted to use Photoshop but I found it didn't have the ease of custom shape design that Illustrator does. With Illustrator I was able to draw basic rectangles and circles and easily manipulate them into the what the UI Kit ended up being.</p><p>Illustrator has a feature where you can create a bunch of artboards and work on different things on them and move them around and move objects and layers around. I used artboards a lot while making the kit. I had an artboard for all the button designs I came up with, an artboard for the designing of the features, an artboard for the colour pallets and an artboard for the final design. Using artboards was so good becuase it made everything a lot more organised and made it so much simplier to have everything in one place but also in seperate places. </p>
 				</div>
 
 				<!--<button class="acc-button">some more stuff</button>
@@ -105,6 +110,7 @@
 			var img3 = document.getElementById("btnpsd");
 			var img4 = document.getElementById("btnidea");
 			var img5 = document.getElementById("colours");
+			var img6 = document.getElementById("art");
 			var modal_img = document.getElementById("img-zoom");
 
 			function img_click(i){
@@ -124,6 +130,7 @@
 			img_click(img3);
 			img_click(img4);
 			img_click(img5);
+			img_click(img6);
 
 //making the menu responsive
 			function responsive_menu() {
