@@ -370,6 +370,11 @@ aside li{
 	transform: scale(1.1);
 }
 
+.iframe{
+	margin-left: 20%;
+	padding-top:2%;
+}
+
 /*---------------------------------------------------| to make responsive |---------------------------------------------------------------*/
 @media only screen and (max-width: 1000px){
     .modal-content {
