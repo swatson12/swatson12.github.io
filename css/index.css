@@ -374,6 +374,13 @@ aside li{
 	margin-left: 20%;
 	padding-top:2%;
 }
+#map {
+	height: 360px;
+	width: 300px;
+	overflow: hidden;
+	float: left;
+	border: thin solid #333;
+	}
 
 /*---------------------------------------------------| to make responsive |---------------------------------------------------------------*/
 @media only screen and (max-width: 1000px){
