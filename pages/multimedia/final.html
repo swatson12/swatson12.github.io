@@ -48,35 +48,39 @@
 	<h1>Web Animation</h1>
 	</section><p class="subtitle">Otago Polytechnic Bachelor of IT - Multimedia Development - Semester 2 2017</p>
 	<section class="content" style="text-align:center">
-			<div id="back"style="text-align:center">
-				<div class="rect" onclick="hover('C',1)"></div>
-				<div class="rect" onclick="hover('D',2)"></div>
-				<div class="rect" onclick="hover('E',2)"></div>
-				<div class="rect" onclick="hover('G',2)"></div>
-				<div class="rect" onclick="hover('A',2)"></div>
-				<!---->
-				<div class="rect two" onclick="hover('C',3)" ></div>
-				<div class="rect two" onclick="hover('D',3)"></div>
-				<div class="rect two" onclick="hover('E',3)"></div>
-				<div class="rect two" onclick="hover('G',3)"></div>
-				<div class="rect two" onclick="hover('A',3)"></div>
-				<!---->
-				<div class="rect three" onclick="hover('C',4)"></div>
-				<div class="rect three" onclick="hover('D',4)"></div>
-				<div class="rect three" onclick="hover('E',4)"></div>
-				<div class="rect three" onclick="hover('G',4)"></div>
-				<div class="rect three" onclick="hover('A',4)"></div>
-				<!---->
-			</div>
-			<br><br><span id="instructions">click on the purple areas to play
-			<br><br>
+		
+			<div id="back">
+					<div class="rect one" onmousedown="hover('C',1)"></div>
+					<div class="rect one" onmousedown="hover('D',2)"></div>
+					<div class="rect one" onmousedown="hover('E',2)"></div>
+					<div class="rect one" onmousedown="hover('G',2)"></div>
+					<div class="rect one" onmousedown="hover('A',2)"></div>
+					<!---->
+					<div class="rect two" onmousedown="hover('C',3)" ></div>
+					<div class="rect two" onmousedown="hover('D',3)"></div>
+					<div class="rect two" onmousedown="hover('E',3)"></div>
+					<div class="rect two" onmousedown="hover('G',3)"></div>
+					<div class="rect two" onmousedown="hover('A',3)"></div>
+					<!---->
+					<div class="rect three" onmousedown="hover('C',4)"></div>
+					<div class="rect three" onmousedown="hover('D',4)"></div>
+					<div class="rect three" onmousedown="hover('E',4)"></div>
+					<div class="rect three" onmousedown="hover('G',4)"></div>
+					<div class="rect three" onmousedown="hover('A',4)"></div>
+					<!---->
+				</div>
+				<br><br>
+				<span id="instructions"><ul style="text-decoration: none;">
+				<li>click on the coloured areas to play</li>
+				<li>darker colour = lower note</li>
+			<li>select a type of sound from the dropdown list</li></ul>
+				<br>
 			Sound: <select id="select" onclick="select()" >
 				<option value="piano">Piano</option>
 				<option value="acoustic">Acoustic</option>
 				<option value="edm">EDM</option>
 				<option value="organ">Organ</option>
-			</select>
-		</span>
+			</select></span>
 		</section>
 
 
@@ -96,11 +100,40 @@
 				function hover(note,octave){
                 piano.play(note, octave, 2); //note is the key note, octave is the octave of the note, 2 is the sound duration
                 
+			}
+			
+            function select(){
+                var s= document.getElementById("select").value;
+                piano = instance.createInstrument(s);
+
+                console.log(s);
+
+                switch(s){
+                    case "piano":
+                        change("#800080","#990099","#b300b3"); //purple
+                        break;
+                    case "acoustic":
+                        change("#006080","#007399","#0086b3"); //aqua blue
+                        break;
+                    case "edm":
+                        change("#008000","#009900","#00b300"); //green
+                        break;
+                    case "organ":
+                        change("#804000","#994d00","#b35900"); //orange
+
+                }
             }
 
-            function select(){
-                var s = document.getElementById("select").value;
-                piano = instance.createInstrument(s);
+            function change(c1,c2,c3){
+                var one=document.getElementsByClassName("one");
+                var two=document.getElementsByClassName("two");
+                var three=document.getElementsByClassName("three");
+
+                for(var i=0;i<one.length;i++){
+                    one[i].style.backgroundColor=c1;
+                    two[i].style.backgroundColor=c2;
+                    three[i].style.backgroundColor=c3;
+                }
             }
 
 			//example of making photo expand https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
