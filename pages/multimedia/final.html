@@ -6,8 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="swatson12.github.io/css/index.css">
 		<link rel="icon" type="image/jpg" href="../../images/back4.jpg">
 
-        <!-- audio js file from http://keithwhor.github.io/audiosynth/-->
-        <!--css transition https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/-->
+        <!-- audio js file from http://keithwhor.github.io/audiosynth/ -->
+        <!--css animation adapted from https://codepen.io/lehollandaisvolant/pen/dMQXYX?editors=0110 -->
         <script src="audiosynth.js"></script>
   </head>
 
@@ -55,20 +55,20 @@
 				<div class="rect" onclick="hover('G',2)"></div>
 				<div class="rect" onclick="hover('A',2)"></div>
 				<!---->
-				<div class="rect" onclick="hover('C',3)"></div>
-				<div class="rect" onclick="hover('D',3)"></div>
-				<div class="rect" onclick="hover('E',3)"></div>
-				<div class="rect" onclick="hover('G',3)"></div>
-				<div class="rect" onclick="hover('A',3)"></div>
+				<div class="rect two" onclick="hover('C',3)" ></div>
+				<div class="rect two" onclick="hover('D',3)"></div>
+				<div class="rect two" onclick="hover('E',3)"></div>
+				<div class="rect two" onclick="hover('G',3)"></div>
+				<div class="rect two" onclick="hover('A',3)"></div>
 				<!---->
-				<div class="rect" onclick="hover('C',4)"></div>
-				<div class="rect" onclick="hover('D',4)"></div>
-				<div class="rect" onclick="hover('E',4)"></div>
-				<div class="rect" onclick="hover('G',4)"></div>
-				<div class="rect" onclick="hover('A',4)"></div>
+				<div class="rect three" onclick="hover('C',4)"></div>
+				<div class="rect three" onclick="hover('D',4)"></div>
+				<div class="rect three" onclick="hover('E',4)"></div>
+				<div class="rect three" onclick="hover('G',4)"></div>
+				<div class="rect three" onclick="hover('A',4)"></div>
 				<!---->
 			</div>
-			<br><br>click on the purple areas to play
+			<br><br><span id="instructions">click on the purple areas to play
 			<br><br>
 			Sound: <select id="select" onclick="select()" >
 				<option value="piano">Piano</option>
@@ -76,7 +76,7 @@
 				<option value="edm">EDM</option>
 				<option value="organ">Organ</option>
 			</select>
-			
+		</span>
 		</section>
 
 

@@ -365,7 +365,6 @@ aside li{
 	height:150px;
 	transition: all .2s ease-in-out;
 	text-align: center;
-	float:center;
 }
 .rect:active{
 	content: '';
@@ -397,8 +396,7 @@ aside li{
 	background-color: #333333;
 	padding:2%;
 	width:25%;
-	float:center;
-	text-align: center;
+	margin:0 auto;
 
 }
 
@@ -413,6 +411,17 @@ aside li{
 	float: left;
 	border: thin solid #333;
 	}
+
+#instructions{
+	text-align:center;
+	margin-bottom: 15%;
+}
+.two{
+	background-color:#990099;
+}
+.three{
+	background-color:#b300b3;
+}
 
 /*---------------------------------------------------| to make responsive |---------------------------------------------------------------*/
 @media only screen and (max-width: 1000px){
@@ -516,10 +525,18 @@ aside li{
 	.h3head{
 		margin-top:3% !important;
 	}
+	.rect{
+		background-color: purple;
+		margin:2px;
+		display: inline-block;
+		width:100px;
+		height:250px;
+		transition: all .2s ease-in-out;
+	}
+	#back{
+		background-color: #333333;
+		padding:2%;margin:0 auto;
+		width:80%;
+	
+	}
 }
-
-
-
-
-
-
