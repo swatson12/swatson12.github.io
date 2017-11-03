@@ -358,7 +358,6 @@ aside li{
 }
 
 .rect{
-	background-color: purple;
 	margin:2px;
 	display: inline-block;
 	width:50px;
@@ -418,6 +417,25 @@ aside li{
 } 
 #instructions li{
 	list-style: none;
+}
+
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+            .fadeIn {
+                animation: fadeIn 0.2s ease-in-out 0s;
+            }
+
+.one{
+	background-color: purple;
+}
+
+
+.two{
+	background-color:#990099;
+}
+.three{
+	background-color:#b300b3;
 }
 
 

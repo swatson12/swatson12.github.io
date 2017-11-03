@@ -50,23 +50,23 @@
 	<section class="content" style="text-align:center">
 		
 			<div id="back">
-					<div class="rect one" onmousedown="hover('C',1)"></div>
-					<div class="rect one" onmousedown="hover('D',2)"></div>
-					<div class="rect one" onmousedown="hover('E',2)"></div>
-					<div class="rect one" onmousedown="hover('G',2)"></div>
-					<div class="rect one" onmousedown="hover('A',2)"></div>
+					<div class="rect one" id="C#2" onmousedown="hover('C#',2)"></div>
+					<div class="rect one" id="D#2" onmousedown="hover('D#',2)"></div>
+					<div class="rect one" id="F2" onmousedown="hover('F' ,2)"></div>
+					<div class="rect one" id="G#2" onmousedown="hover('G#',2)"></div>
+					<div class="rect one" id="A#2" onmousedown="hover('A#',2)"></div>
 					<!---->
-					<div class="rect two" onmousedown="hover('C',3)" ></div>
-					<div class="rect two" onmousedown="hover('D',3)"></div>
-					<div class="rect two" onmousedown="hover('E',3)"></div>
-					<div class="rect two" onmousedown="hover('G',3)"></div>
-					<div class="rect two" onmousedown="hover('A',3)"></div>
+					<div class="rect two" id="C#3" onmousedown="hover('C#',3)" ></div>
+					<div class="rect two" id="D#3" onmousedown="hover('D#',3)"></div>
+					<div class="rect two" id="F3" onmousedown="hover('F' ,3)"></div>
+					<div class="rect two" id="G#3" onmousedown="hover('G#',3)"></div>
+					<div class="rect two" id="A#3" onmousedown="hover('A#',3)"></div>
 					<!---->
-					<div class="rect three" onmousedown="hover('C',4)"></div>
-					<div class="rect three" onmousedown="hover('D',4)"></div>
-					<div class="rect three" onmousedown="hover('E',4)"></div>
-					<div class="rect three" onmousedown="hover('G',4)"></div>
-					<div class="rect three" onmousedown="hover('A',4)"></div>
+					<div class="rect three" id="C#4" onmousedown="hover('C#',4)"></div>
+					<div class="rect three" id="D#4" onmousedown="hover('D#',4)"></div>
+					<div class="rect three" id="F4"  onmousedown="hover('F' ,4)"></div>
+					<div class="rect three" id="G#4" onmousedown="hover('G#',4)"></div>
+					<div class="rect three" id="A#4" onmousedown="hover('A#',4)"></div>
 					<!---->
 				</div>
 				<br><br>
@@ -108,12 +108,10 @@
                 var t = {
                     note:note,
                     octave:octave,
+                    returnV:note+octave,
                 }
                 notes.push(t);
-                if(notes.length!=0){
-                    console.log("disable");
-                   // document.getElementById("i").innerHTML=" ";
-                }
+              
             }
 
             function select(){
@@ -158,15 +156,13 @@
             }
 
             //to playback the input
+            
             function playback(){
                 console.log(notes);
-                if(n===notes){
-                console.log("nothing in notes");
-                    //document.getElementById("i").innerHTML="play some music first!";
-                }else{
                     for(var e=0; e<notes.length;e++){
-                        wait(e);//document.getElementById("i").innerHTML="played!";
-                    }
+                        var t = 400*e;
+                        setTimeout(wait, (t),e);
+                        document.getElementById(notes[e].returnV).classList.remove("fadeIn");
                 }
             }
 
@@ -174,13 +170,19 @@
                 document.getElementById("btn").disabled=true;
                 notes=[];
                 console.log(notes);
-                //document.getElementById("i").innerHTML="reset!";
             }
 
             function wait(e){
-                console.log(notes[e].note);
                 piano.play(notes[e].note,notes[e].octave,2);
+                var v = notes[e].returnV;
+                if(document.getElementById(v)!='undefined'){
+                   setTimeout( flash, (0), v);
+                   document.getElementById(v).classList.remove("fadeIn");
+                }
+            }
 
+            function flash(v){
+               document.getElementById(v).classList.add("fadeIn");
             }
 
 			//example of making photo expand https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
