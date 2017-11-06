@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sam Watson - Online Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="../../css/index.css">
+		<link rel="stylesheet" type="text/css" href="swatson12.github.io/css/index.css">
+		<link rel="icon" type="image/jpg" href="../../images/back4.jpg">
+  </head>
+
+  <body>
+	<h1 class="top-header">Sam Watson - Online Portfolio</h1>
+	<nav class="n" id="nav">
+			<a class="m" onclick="responsive_menu()" >&#9776; Menu</a>
+		<a href="../../index.html">Home</a>
+		<a href="../soft en/softwareEng.html">Software Engineering </a>
+		<div class="dropdown" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Multimedia Development Portfolio</a></li> 	
+				<div class="dropitems" id="dropitems">
+					<a href="uikit.html">UI Kit</a>
+					<a href="soundscape.html">Soundscape</a>
+					<a href="lifehack.html">Life Hack Video</a>
+					<a href="3dmodel.html">3D Model</a>
+					<a href="final.html">Web Animation</a>
+				</div>
+        </div>
+        <div class="dropdown" id="dropdown">
+            <a class="drop-link" onclick="dropitems()">Project 1 Portfolio</a>
+            <div class="dropitems" id="dropitems">
+                <a href="reflection.html">Reflection</a>
+                <a href="/">tbc</a>
+                <a href="/">tbc</a>
+            </div>
+        </div>
+		<a href="../main/about.html">About</a>
+		<div class="dropdown useful" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Useful Links</a>
+			<div class="dropitems" id="dropitems">
+                    <a href="#task1">Task 1 - Squash App</a>			
+            </div>
+		</div>
+	</nav>
+	
+	<aside>
+	<h4>Useful Links</h4>
+	<ul>
+			<li><a href="#task1">Task 1 - Squash App</a></li>
+	</br></br>
+	</ul>
+	</aside>
+	<section class="title">
+	<h1>Reflection</h1>
+	</section><p class="subtitle">Otago Polytechnic Bachelor of IT - Multimedia Development - Semester 2 2017</p>
+	<section class="content">
+        <section class="about">
+            <h2 id="task1">Task 1 - Squash App</h2>
+            <p>
+                    For my first task in the Community Software group was to make an app to digitise the submission of match results for Squash Otago. This was an app I’d been thinking about making for a while and I figured this would be the perfect time to put what had been in my head onto an actual app. 
+                    Initially Sam, Abdel and I were working on it until Patricia decided to split us up and have us work on separate tasks, which suited me better because I was really struggling with explaining why all the different parts were needed and how they were used. 
+                    When I started the app, my only sort of plan was to translate the print out of what we had to fill in each interclub night and put it on an app. I spent a little bit of time thinking about how the players, matches and match scores should be recorded and saved, and I eventually coming up with how the app runs now, with typing in the players details and the team details, then having to use dropdowns to assign who was playing who, and some more typing to input the scores of each match. Looking back, I wish I’d spent some more time planning how the app would work, before jumping in and being too eager to start programming. If I’d spent some more time planning how it would work, I would have had a much better flow of the app and the way it saves the data would definitely be different. I really enjoyed making this app and if I’d had longer I would have found out if the Squash New Zealand site had an API I could use to get all the player’s details with just a search on the team name, club or even the player’s name. 
+                    After I got all the main functionality completed and working, I changed the app’s design and gave it a couple of menus (one menu for the data management and a main menu to view the previous tie or start a new tie) and added a functionality to prevent parts of the app being accessed before it had all the data. Adding the menus and the extra functionality made the code super confusing and because I didn’t really have the knowledge of writing good code, the code was essentially the definition of spaghetti code and I’ve learnt from that, my code in the latest projects is more modular and commented and a lot tidier.
+                    The biggest problem I had while developing was getting the data saved to be able to access it later. I ended up going with shared preferences to save the data locally to the phone, which makes the app able to be used while offline, but the way I went about saving the data was extremely messy and made it hard to write code to access the data. I was passing the data around in bundles between the activities and it was complicated to keep track of and having to write code to get them out of the bundles. 
+                    When it came time to test the app, I got my family who plays squash and would use the app to test it for me and I used it a couple of times on interclub nights to see if it really was making life even a little bit easier. I came up with a list of tasks that had to be completed and I sat and watched the testers do them, only helping when they were extremely stuck. Doing this proved to be a great idea because it helped me see that even though using the app was intuitive to me, it wasn’t that intuitive for anyone else. It also highlighted bugs and design flaws that I compiled into a list to fix.
+                    At the end of the task, no one was using it on interclub nights, but I believe if I worked on it more and made it make more sense and less typing, it could definitely be used during interclub to limit the amount of paperwork and work that the interclub controller has to do
+                    
+            </p>
+            </section>
+        </section>
+<script>
+
+//making the menu responsive
+			function responsive_menu() {
+				var x = document.getElementById("nav");
+				if (x.className === "n"||x.className==="dropdown") {
+					console.log(x.className);
+						x.className += " responsive";
+				} else {
+						x.className = "n";
+				}
+			}
+			function dropitems(){
+				var x=document.getElementById("dropitems");
+					console.log(x.classList.contains("dropitems"));
+			}
+</script>
+</body>
+</html>
