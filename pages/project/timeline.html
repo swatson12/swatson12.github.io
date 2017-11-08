@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sam Watson - Online Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="../../css/index.css">
+		<link rel="stylesheet" type="text/css" href="swatson12.github.io/css/index.css">
+		<link rel="icon" type="image/jpg" href="../../images/back4.jpg">
+  </head>
+
+  <body>
+	<h1 class="top-header">Sam Watson - Online Portfolio</h1>
+	<nav class="n" id="nav">
+			<a class="m" onclick="responsive_menu()" >&#9776; Menu</a>
+		<a href="../../index.html">Home</a>
+		<a href="../soft en/softwareEng.html">Software Engineering </a>
+		<div class="dropdown" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Multimedia Development Portfolio</a></li> 	
+				<div class="dropitems" id="dropitems">
+					<a href="uikit.html">UI Kit</a>
+					<a href="soundscape.html">Soundscape</a>
+					<a href="lifehack.html">Life Hack Video</a>
+					<a href="3dmodel.html">3D Model</a>
+					<a href="final.html">Web Animation</a>
+				</div>
+		</div>
+        <div class="dropdown" id="dropdown">
+            <a class="drop-link" onclick="dropitems()">Project 1 Portfolio</a>
+            <div class="dropitems" id="dropitems">
+                <a href="reflection.html">Reflection</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="/">tbc</a>
+            </div>
+        </div>
+		<a href="../main/about.html">About</a>
+		<div class="dropdown useful" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Shortcuts</a>
+			<div class="dropitems" id="dropitems">
+                <a href="https://trello.com/invite/b/3jgPVtkj/7dd3ac8ecd721a8b4247f761c81394a0/project-diary" target="_blank">Project Diary Trello</a>
+            </div>
+		</div>
+	</nav>
+	
+	<aside>
+	<h4>Useful Links</h4>
+	<ul>
+			<li><a href="https://trello.com/invite/b/3jgPVtkj/7dd3ac8ecd721a8b4247f761c81394a0/project-diary" target="_blank">Project Diary Trello</a></li>
+	</br></br>
+	</ul>
+	</aside>
+	<section class="title">
+	<h1>Timeline</h1>
+	</section><p class="subtitle">Otago Polytechnic Bachelor of IT - Project 1 - Semester 2 2017</p>
+	<section class="content">
+            <button class="acc-button">Week 1 - 17 July - 21 July</button>
+            <div class="panel">
+                <p><ul>
+                    <li>Joined community software project group</li>
+                    <li>Started an app for Otago squash to digitise the submission of scores at the end of interclub nights</li>
+                    <li>Made the layout for the input of the team details (name, squash code, grade, team name)</li>
+                    <li>Made objects that store the player’s information and the matches</li>
+                    <li>Drop down lists of players in each team to get the matches</li>
+                    <li>Data passed between activities</li>
+                    <li>Created a home screen with buttons to navigate</li>
+                    <li>Had a check so the user can’t assign the matches if there aren’t any players</li>
+                </ul></p>
+            </div>
+
+            <button class="acc-button">Week 2 - 24 July - 28 July</button>
+            <div class="panel">
+                <p>
+                    <ul>
+                        <li>Started on the activity where you input the match scores, had the relevant information passed into the activity correctly</li>
+                        <li>Worked on the layout and functionality of the previously mentioned activity, added spinners to be able to select what match the scores are for and who the winner was of the match. The winner spinner is dynamically filled after the match is selected</li>
+                        <li>Tried to add a custom list view in for the score entering so there isn’t a previously defined number of fields that fill up the screen</li>
+                    </ul>
+                </p>
+            </div>
+
+            <button class="acc-button">Week 3 - 31 July - 4 August</button>
+            <div class="panel">
+                <p>
+                    <ul>
+                        <li>Added an activity that displays all the information that has been input</li> 
+                        <li>Fixed some weird errors I had with naming things that were all similar</li>
+                        <li>Got a mailto: working so all the entered data is put into a readable format that can be sent to anyone</li> 
+                        <li>There’s a weird way the match scores are all calculated at the end of the interclub night and I managed to write some code so it’s automatically calculated and so there’s no confusion over it anymore</li>
+                        <li>I got confused with all the data being passed around the different activities so I commandeered a whiteboard and brain dumped everything that was happening in the app so I could see how it was happening</li>
+                        <li>Got the app working well enough and looking good enough to be used by people</li>
+                        <li>Did user testing and got some really good feedback and changes I could make and bugs to fix that I put into a list to work on</li> 
+                    </ul>
+                </p>
+            </div>
+
+        </section>
+<script>
+
+//making the menu responsive
+			function responsive_menu() {
+				var x = document.getElementById("nav");
+				if (x.className === "n"||x.className==="dropdown") {
+					console.log(x.className);
+						x.className += " responsive";
+				} else {
+						x.className = "n";
+				}
+			}
+			function dropitems(){
+				var x=document.getElementById("dropitems");
+					console.log(x.classList.contains("dropitems"));
+			}
+            
+			//accordian list
+			//example at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol
+			var acc=document.getElementsByClassName("acc-button");
+			var i;
+
+			for(i=0;i<acc.length;i++){
+				acc[i].onclick=function(){
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if(panel.style.maxHeight){
+						panel.style.maxHeight=null;
+					}
+					else{
+						panel.style.maxHeight=panel.scrollHeight+"px";
+					}
+
+				}
+			}
+</script>
+</body>
+</html>
