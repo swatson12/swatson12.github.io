@@ -29,9 +29,6 @@
     text-align: justify;
 }
 
-#reflection{
-    width:17%;
-}
 .fixed-nav .useful{
     display:inline;
 }
@@ -54,6 +51,21 @@
     clear:left;
 }
 
-li{
+.timeline li{
     line-height: 1.5em;
+}
+
+.title{
+    width:65%;
+}
+
+aside{
+    width:31%;
+    margin-top:1%;
+    
+}
+
+.subtitle{
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
 }

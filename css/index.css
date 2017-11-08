@@ -30,7 +30,7 @@
 	margin:2%;
 }
 .title{
-	width:80%;
+	width:65%;
 	border-bottom:2px #494949 solid;
 }
 body {
@@ -116,10 +116,10 @@ body{
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 aside{
-	width:15%;
+	width:31%;
 	float:right;
 	border-left:2px #494949 solid;
-	margin-top:2%;
+	margin-top:1%;
 	padding-left:2%;
 	padding-bottom: 2%;
 	display:inline;
@@ -140,10 +140,10 @@ aside li{
 }
 .subtitle{
 	font-family:nav;
-	padding-top:2%;
+	padding-top:2.5%;
 	margin-top:0;
 	font-size:120%;
-	padding-bottom:2%;
+	padding-bottom:2.5%;
 	border-bottom:2px #494949 solid;
 }
 
@@ -316,8 +316,6 @@ aside li{
  }
 
  button.acc-button.active, button.acc-button.hover{
-	/*background-color: #E9E5E5;*/
-	
     font-weight: bold;
  }
 
