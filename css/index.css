@@ -301,12 +301,13 @@ aside li{
 	display: none;
 }
  button.acc-button{
-	background-color: #eee;
+	background-color: white;
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
-    border: none;
+	width: 100%;
+	border:none;
+	border-bottom:2px #494949 solid;
     text-align: left;
     outline: none;
     font-size: 150%;
@@ -315,7 +316,9 @@ aside li{
  }
 
  button.acc-button.active, button.acc-button.hover{
-	background-color: #ccc;
+	/*background-color: #E9E5E5;*/
+	
+    font-weight: bold;
  }
 
  button.acc-button:after{

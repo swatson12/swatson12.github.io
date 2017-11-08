@@ -8,15 +8,22 @@
 	}
 
 
-.reflection h3{
+.reflection h3, .timeline h3{
 	font-family:nav;
-	font-size:200%;
+    font-size:200%;
+    clear: right;
 	margin:0;
 }
 
 .reflection{
 	width:75%;
 	border-bottom:2px #494949 solid;
+    padding:2%;
+    margin: 0 auto;
+    text-align: justify;
+}
+.timeline{
+	width:75%;
     padding:2%;
     margin: 0 auto;
     text-align: justify;
@@ -31,7 +38,8 @@
 .fixed-nav.n{
         position:fixed;
         left:0;
-        background-color:#D1D8DB;
+        background-color:white;
+        border-bottom:2px #494949 solid;
         margin:0 auto;
         top:0;
         padding-top:2%;
@@ -44,4 +52,8 @@
 .return-top{
     float:right;
     clear:left;
+}
+
+li{
+    line-height: 1.5em;
 }

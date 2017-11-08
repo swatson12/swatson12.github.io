@@ -3,7 +3,7 @@
   <head>
     <title>Sam Watson - Online Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../../css/index.css">
-		<link rel="stylesheet" type="text/css" href="swatson12.github.io/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../../css/project.css">
 		<link rel="icon" type="image/jpg" href="../../images/back4.jpg">
   </head>
 
@@ -33,65 +33,146 @@
         </div>
 		<a href="../main/about.html">About</a>
 		<div class="dropdown useful" id="dropdown">
-			<a class="drop-link" onclick="dropitems()">Shortcuts</a>
+			<a class="drop-link" onclick="dropitems()">Useful Links/Shortcuts</a>
 			<div class="dropitems" id="dropitems">
                 <a href="https://trello.com/invite/b/3jgPVtkj/7dd3ac8ecd721a8b4247f761c81394a0/project-diary" target="_blank">Project Diary Trello</a>
+                <a href="#task1">Task 1 - Squash App</a>
+                <a href="#task2">Task 2 - AYA App</a>		
+                <a href="#task3">Task 3 - IoT Database and API</a>
+                <a href="#task4">Task 4 - Oculus Rift and OAR</a>
             </div>
 		</div>
 	</nav>
 	
 	<aside>
-	<h4>Useful Links</h4>
+	<h4>Useful Links/Shortcuts</h4>
 	<ul>
 			<li><a href="https://trello.com/invite/b/3jgPVtkj/7dd3ac8ecd721a8b4247f761c81394a0/project-diary" target="_blank">Project Diary Trello</a></li>
+            <li><a href="#task1">Task 1 - Squash App</a></li>
+            <li><a href="#task2">Task 2 - AYA App</a>	</li>	
+            <li><a href="#task3">Task 3 - IoT Database and API</a></li>
+            <li><a href="#task4">Task 4 - Oculus Rift and OAR</a></li>
 	</br></br>
 	</ul>
 	</aside>
 	<section class="title">
 	<h1>Timeline</h1>
 	</section><p class="subtitle">Otago Polytechnic Bachelor of IT - Project 1 - Semester 2 2017</p>
-	<section class="content">
-            <button class="acc-button">Week 1 - 17 July - 21 July</button>
-            <div class="panel">
-                <p><ul>
-                    <li>Joined community software project group</li>
-                    <li>Started an app for Otago squash to digitise the submission of scores at the end of interclub nights</li>
-                    <li>Made the layout for the input of the team details (name, squash code, grade, team name)</li>
-                    <li>Made objects that store the player’s information and the matches</li>
-                    <li>Drop down lists of players in each team to get the matches</li>
-                    <li>Data passed between activities</li>
-                    <li>Created a home screen with buttons to navigate</li>
-                    <li>Had a check so the user can’t assign the matches if there aren’t any players</li>
-                </ul></p>
-            </div>
+	<section class="timeline">
+        <h3 id="task1">Task 1 - Squash App</h3>
+        <button class="acc-button">Week 1 - 17 July - 21 July</button>
+        <div class="panel">
+            <p><ul>
+                <li>Joined community software project group</li>
+                <li>Started an app for Otago squash to digitise the submission of scores at the end of interclub nights</li>
+                <li>Made the layout for the input of the team details (name, squash code, grade, team name)</li>
+                <li>Made objects that store the player’s information and the matches</li>
+                <li>Drop down lists of players in each team to get the matches</li>
+                <li>Data passed between activities</li>
+                <li>Created a home screen with buttons to navigate</li>
+                <li>Had a check so the user can’t assign the matches if there aren’t any players</li>
+            </ul></p>
+        </div>
 
-            <button class="acc-button">Week 2 - 24 July - 28 July</button>
-            <div class="panel">
-                <p>
-                    <ul>
-                        <li>Started on the activity where you input the match scores, had the relevant information passed into the activity correctly</li>
-                        <li>Worked on the layout and functionality of the previously mentioned activity, added spinners to be able to select what match the scores are for and who the winner was of the match. The winner spinner is dynamically filled after the match is selected</li>
-                        <li>Tried to add a custom list view in for the score entering so there isn’t a previously defined number of fields that fill up the screen</li>
-                    </ul>
-                </p>
-            </div>
+        <button class="acc-button">Week 2 - 24 July - 28 July</button>
+        <div class="panel">
+            <p>
+                <ul>
+                    <li>Started on the activity where you input the match scores, had the relevant information passed into the activity correctly</li>
+                    <li>Worked on the layout and functionality of the previously mentioned activity, added spinners to be able to select what match the scores are for and who the winner was of the match. The winner spinner is dynamically filled after the match is selected</li>
+                    <li>Tried to add a custom list view in for the score entering so there isn’t a previously defined number of fields that fill up the screen</li>
+                </ul>
+            </p>
+        </div>
 
-            <button class="acc-button">Week 3 - 31 July - 4 August</button>
-            <div class="panel">
-                <p>
-                    <ul>
-                        <li>Added an activity that displays all the information that has been input</li> 
-                        <li>Fixed some weird errors I had with naming things that were all similar</li>
-                        <li>Got a mailto: working so all the entered data is put into a readable format that can be sent to anyone</li> 
-                        <li>There’s a weird way the match scores are all calculated at the end of the interclub night and I managed to write some code so it’s automatically calculated and so there’s no confusion over it anymore</li>
-                        <li>I got confused with all the data being passed around the different activities so I commandeered a whiteboard and brain dumped everything that was happening in the app so I could see how it was happening</li>
-                        <li>Got the app working well enough and looking good enough to be used by people</li>
-                        <li>Did user testing and got some really good feedback and changes I could make and bugs to fix that I put into a list to work on</li> 
-                    </ul>
-                </p>
-            </div>
+        <button class="acc-button">Week 3 - 31 July - 4 August</button>
+        <div class="panel">
+            <p>
+                <ul>
+                    <li>Added an activity that displays all the information that has been input</li> 
+                    <li>Fixed some weird errors I had with naming things that were all similar</li>
+                    <li>Got a mailto: working so all the entered data is put into a readable format that can be sent to anyone</li> 
+                    <li>There’s a weird way the match scores are all calculated at the end of the interclub night and I managed to write some code so it’s automatically calculated and so there’s no confusion over it anymore</li>
+                    <li>I got confused with all the data being passed around the different activities so I commandeered a whiteboard and brain dumped everything that was happening in the app so I could see how it was happening</li>
+                    <li>Got the app working well enough and looking good enough to be used by people</li>
+                    <li>Did user testing and got some really good feedback and changes I could make and bugs to fix that I put into a list to work on</li> 
+                </ul>
+            </p>
+        </div>
 
-        </section>
+        <button class="acc-button">Week 4 - 7 August - 11 August</button>
+        <div class="panel">
+            <p>
+                <ul>
+                    <li>Tried to make the data reading from some spinners better, but it didn’t work</li>
+                    <li>Got a shared preferences saved state working so you can either view the tie you’ve already put in, or start a new one</li>
+                    <li>Was asked to be the point of contact for an app for Otago Access Radio</li>
+                    <li>Made a home screen so you can pick whether to start a new tie or go back to the previous one
+                    <li>Worked on the layout so it was more functional and consistent</li>
+                    <li>Completed the app</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <h3 id="task2">Task 2 - AYA App</h3>
+        <button class="acc-button">Week 1 - 14 August - 18 August</button>
+        <div class="panel">
+            <p>
+                <ul>
+                    <li>Started on the AYA app – Sam and Abdel had already sort of been working on it for a week</li>
+                    <li>Used photoshop and got images out of the PDFs for us to use in the app</li>
+                    <li>Made the menu with all the button listeners for the different buttons, made a switch to check for the button then used one on click handler for all, the buttons all essentially did the same thing, just went to different activities</li>
+                    <li>Set up the layout files so every layout was the same and consistent across the app and wrote a readme on how to use the files so Sam and Abdel can use them without too much trouble</li>
+                    <li>Started thinking about an app for OAR, going off the outline of the app they’d given us</li>
+                    <li>Made an activity of links to key workers of AYA in different regions</li>
+                </ul>
+            </p>
+        </div>
+
+        <button class="acc-button">Week 2 - 21 August - 25 August</button>
+        <div class="panel">
+            <p>
+                <ul>
+                    <li>Made the medications activity, it views, adds, deletes and edits all in one activity with 3 dialog fragments.</li>
+                    <li>Made sure all completed activities had working home/back/menu buttons and that they were going to the right activities</li>
+                    <li>Used photoshop again to resize some images that were too big for the app an essentially crashing it and to make some .jpgs into .pngs so we had transparent backgrounds where needed</li>
+                    <li>There was a weird bug in the appointments page that was making the app crashed, turned out it was a 1000px image being used as a 5px icon which used way too much memory to load which crashed the app. Fixed it by resizing the image to a size much smaller</li>
+                    <li>Spent some time making the home screen nicer, we had initially thrown an image and some buttons together and called it a home page, but I changed it so it was more consistent with the rest of the app</li>
+                    <li>Sat with Sam to do a lot of functionality clean up, made some images smaller, fixed a couple weird bugs</li>
+                    <li>We had a meeting with Martin Kean from the design school about the app on the Friday, and he liked but got us to make some design changes and a button for a credits fragment so he could show it to the people at DHB. We made the changes and emailed an APK to him and waited to hear how his meeting went.</li>
+                    <li>Completed the app</li>
+                        
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <h3 id="task3">Task 3 - IoT Database and API</h3>
+        <button class="acc-button">Week 1 - 28 August - 1 September</button>
+        <div class="panel">
+            <p>tbc
+                <ul>
+
+                </ul>
+            </p>
+        </div>
+
+    </section>
+
+    <!--accordian template
+        <button class="acc-button">Week 1 - 14 August - 18 August</button>
+        <div class="panel">
+            <p>
+                <ul>
+
+                </ul>
+            </p>
+        </div>
+    -->
+
 <script>
 
 //making the menu responsive
