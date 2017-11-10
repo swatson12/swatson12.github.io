@@ -246,7 +246,7 @@ aside li{
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 70%;
     max-width: 700px;
 }
 
@@ -554,6 +554,5 @@ aside li{
 		background-color: #333333;
 		padding:2%;margin:0 auto;
 		width:80%;
-	
 	}
 }

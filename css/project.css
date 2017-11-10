@@ -69,3 +69,31 @@ aside{
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
+ol{
+    padding:3%;
+}
+
+.griid img{
+    width:46%;
+    padding:2%;
+
+}
+.griid{
+    width:100%;
+}
+.modal img{
+    width:350%;
+}
+
+.grid img{
+    width:100%;
+}
+/*---------------------------------------------------| to make responsive |---------------------------------------------------------------*/
+@media only screen and (max-width: 900px){
+
+	.griid img{
+		width:95%;
+		padding:2%;
+	
+	}
+}
