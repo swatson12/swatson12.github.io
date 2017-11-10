@@ -77,6 +77,12 @@
                   </p><br>
                   <li>How well did you document your work throughout the project?<!--2.5/5--></li><p>
                     Documentation isn’t my strong suit and because of this I didn’t do a whole lot of it this semester. I commented my code where needed, wrote a data dictionary and API endpoints for the OAR API, and a How To for the layout files in the AYA app(see evidence of these below). I’m very aware I could have completed a lot more documentation and I’m going to try next semester to write more. 
+                    <br><a href="https://github.com/OtagoPolytechnic/CommSoftTasks/blob/OAR_API/OAR/Otago%20Access%20Radio%20API%20Database%20Data%20Dictionary.docx">OAR API Documentation</a> <br><a href="https://github.com/OtagoPolytechnic/CommSoftTasks/blob/OAR_API/ayaApp/how%20to%20use%20the%20layouts.txt">AYA App Layout Files How To Document</a><br><div class="grid">
+                            <img src="../../images/commenting.JPG" title="Evidence of commenting in OAR API code" id="8"><div class="modal" id="js-modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="img-zoom"/>
+                            </div>
+                        </div>
                     </p><br>
                   <li>How well did you respond to problems or changing requirements? <!--4/5--></li><p>
                         There was always a bit of initial confusion and internalised annoyance, but I always just accepted it, and made the changes or worked to fix the problem. Two most memorable times requirements changed were with the IoT Database and with OAR. With the IoT Database, at the start of the second week working on it, it was decided that we didn’t need the three weeks assigned, so we had to get it completed by the end of the week. After the first panic of “we have a lot to do in 4 days,” we got to work and worked hard to make the shortened deadline. We made the deadline and we were proud of the work we produced. After I’d spent just over a week making an API for Otago Access Radio, they decided , they wanted to go back to their original idea of having an app, and not use the API.  This effectively made the API I’d been working on irrelevant. for the future. It was annoying, but I finished the documentation I’d been working on and commented the code I’d written and now it’s in the GitHub repo, waiting to be potentially used next semester. 
@@ -91,7 +97,12 @@
                     <ol>
                         <li>What is the overall quality of your code like?</li><p> <!--3.5/5-->
                         The quality of my code has definitely improved since the start of the semester. For instance, during the squash app development, I didn’t plan anything and threw code at the wall hoping it would stick. Even though the AYA app was only the next task, I feel like my code improved immensely, it was more modular and easier to read.
-                        <!--Get examples from squash and aya apps--></p></br>
+                        <!--Get examples from squash and aya apps--><br><div class="griid">
+                                <img src="../../images/squashcode.JPG" title="Evidence of not so great Squash App code" id="9"><img src="../../images/ayacode.JPG" title="Evidence of better AYA App code" id="10"><div class="modal" id="js-modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img-zoom"/>
+                                </div>
+                            </div></p></br>
                         
                         <li>How well did you follow best practices in development?</li><p><!-- 4/5-->
                         When we were doing the two tasks (AYA and IoT Database) as a group, we tried to follow best practices as well as possible to avoid confusion about what everyone had to do and where it was happening. With the AYA app we didn’t do it so well - we had a whiteboard with a list of tasks and activities that had to be completed by the due date and we assigned them to ourselves which we then ticked off as we completed them. We tested where appropriate, mostly after writing a bit of code to get the main functionality and then testing if we’d made a fix and needed to check it was working. With version control, we didn’t do very well, we used GitHub but we figured since we were working on explicitly different parts of the app, we didn’t need to make our own branches of the app and have a pull request to a master branch when we’d completed an activity or task. This wasn’t great because nearly every time any of us committed to git, there was a merge conflict. Taking the challenges from the AYA app we made a few improvements and had a different way of doing things with IoT Database. We still used the whiteboard at the start to sort out the tasks that were involved and to divide them up, but we then put that on a Trello board so anyone could see what was in progress, completed and who was doing what. On our group’s GitHub, we set up a master branch for the API and then we each an individual branch that we worked on and then made a pull request when we completed a major change. This was so much better than before with the AYA app, it was a lot easier to have a better work flow by being that more organised and everyone was less confused. 
@@ -137,6 +148,9 @@
 			var img5 = document.getElementById("5");
 			var img6 = document.getElementById("6");
 			var img7 = document.getElementById("7");
+			var img8 = document.getElementById("8");
+			var img9 = document.getElementById("9");
+			var img10 = document.getElementById("10");
 			var modal_img = document.getElementById("img-zoom");
 
 			function img_click(i){
@@ -160,6 +174,9 @@
 			img_click(img5);
 			img_click(img6);
 			img_click(img7);
+			img_click(img8);
+			img_click(img9);
+			img_click(img10);
 
 //making the menu responsive
 			function responsive_menu() {
