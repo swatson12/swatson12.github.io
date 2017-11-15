@@ -28,10 +28,10 @@
             <div class="dropitems" id="dropitems">
                 <a href="../project/reflection.html">Reflection</a>
                 <a href="../project/timeline.html">Timeline</a>
-                <a href="/">tbc</a>
+                <a href="../project/techpro.html">Technical and Professional Proficiency</a>
             </div>
         </div>
-		<a href="../main/about.html">About</a>
+		<a href="../main/about.html">CV</a>
 		<div class="dropdown useful" id="dropdown">
 			<a class="drop-link" onclick="dropitems()">Useful Links</a>
 			<div class="dropitems" id="dropitems">
@@ -70,6 +70,14 @@
 			<p>
 				In the first version of the soundscape, at the very end I had a cannon go off really loudly, which I thought was pretty funny at the time, but after hearing the rest of the class' soundscapes, I took it out as it was definitely not appropriate.
 			</p>
+			<img src="../../images/tracks.jpg" id="1" class="ssimg">
+			<div class="modal" id="js-modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="img-zoom"/>
+			</div>
+			<img src="../../images/ssbase.jpg" id="2" class="ssimg">
+			<div class="modal" id="js-modal">
+			</div>
 			</section>
 			<p class="line"></p>
 			<section class ="about">
@@ -120,6 +128,31 @@
 						console.log(x.classList.contains("dropitems"));
 					//}
 				}
+
+			//example of making photo expand https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+			//making the images zoom
+			var modal = document.getElementById("js-modal");
+			var modal_img = document.getElementById("img-zoom");
+
+			var img1 = document.getElementById("1");
+			var img2 = document.getElementById("2");
+
+			function img_click(i){
+				i.onclick=function(){
+					modal.style.display="block";
+					modal_img.src=this.src;
+					}
+			}
+
+			var span=document.getElementsByClassName("close")[0];
+			span.onclick=function(){
+				modal.style.display="none";
+				modal_img.classList.remove("pirate");
+			}
+
+			img_click(img1);
+			img_click(img2);
+
 			</script>
   </body>
 </html>
