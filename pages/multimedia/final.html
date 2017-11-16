@@ -64,7 +64,7 @@
 				<div class="rect one" id="A#2" onmousedown="hover('A#',2)"></div>
 				<br>
 				<!---->
-				<div class="rect two" id="C#3" onmousedown="hover('C#',3)" ></div>
+				<div class="rect two" id="C#3" onmousedown="hover('C#',3)"></div>
 				<div class="rect two" id="D#3" onmousedown="hover('D#',3)"></div>
 				<div class="rect two" id="F3" onmousedown="hover('F' ,3)"></div>
 				<div class="rect two" id="G#3" onmousedown="hover('G#',3)"></div>
@@ -80,9 +80,11 @@
 			</div>
 				<br><br>
 				<span id="instructions"><ul style="text-decoration: none;">
-				<li>click on the coloured areas to play</li>
-				<li>darker colour = lower note</li>
-			<li>select a type of sound from the dropdown list</li></ul>
+				<li>Click on the coloured areas to play</li>
+				<li>Darker colour = lower note</li>
+				<li>Select a type of sound from the dropdown list</li>
+				<li>Press play to hear your tune back</li>
+			</ul>
 				<br>
 			Sound: <select id="select" onclick="select()" >
 				<option value="piano">Piano</option>
@@ -91,6 +93,13 @@
 				<option value="organ">Organ</option>
 			</select>
 			<br><input type='submit' onclick=playback() id="btn" value="Play" disabled /><input type='submit' onclick=reset() value="Reset"/><p><span id="i"></span></span>
+			<p class="line"></p><br>
+				<section class="content">
+					<h4 class="subtitle" style="text-align:left; font-size:200%; padding-top:0;border:0;">About the Animation</h4>
+					<p>
+						For my web animation, I decided to do an abstract piano. I based it off an audio library I found called audiosynth. The library asks for a note, an octave and a "sound" (piano, EDM, organ or acoustic). I set the notes and octave statically in the html as it was way too hard to have it be set dynamically through user input. By selecting a sound in the dropdown, the keys change colour, or background, depending on the sound chosen.</p> <p>With the acoustic sound, I realised it sounded Chinese-like, so I made the colours and background reflect that. The other colours were chosen because they looked good against the background grey and they were all within the same shade. I decided to have the colours change depending on the sound so it was easy to differentiate between the sounds and have colours tied to them.</p><p>I decided to add the play button so users have the ability to listen back to the keys they pressed. On playback, the keys and sounds that have been used are remembered within the JavaScript so it's an accurate playback as possible. If I had time for further development, I would find a way to record the times between the key presses and have the playback reflect that.</p>
+					
+				</section>
 		</section>
 
 
@@ -112,11 +121,13 @@
             function hover(note,octave){
                 piano.play(note, octave, 2); //note is the key note, octave is the octave of the note, 2 is the sound duration in seconds
                 document.getElementById("btn").disabled=false;
+                var s= document.getElementById("select").value;
                
                 //to play back the notes
                 var t = {
                     note:note,
                     octave:octave,
+					sound:s,
                     returnV:note+octave,
                 }
                 notes.push(t);
@@ -126,7 +137,10 @@
             function select(){
                 var s= document.getElementById("select").value;
                 piano = instance.createInstrument(s);
+				switch_bg(s);
+			}
 
+			function switch_bg(s){
                 switch(s){
                     case "piano":
                         change("#800080","#990099","#b300b3"); //purple
@@ -134,7 +148,6 @@
                         document.getElementById("back").style.backgroundColor="#333333";
                         break;
                     case "acoustic":
-                       // change("#006080","#007399","#0086b3"); //aqua blue
                         change("#800000","#990000","#b30000"); //red
                         document.getElementById("back").style.backgroundImage="url('animation-bg.jpg')";
                         break;
@@ -146,7 +159,7 @@
                     case "organ":
                         document.getElementById("back").style.backgroundImage="none";
                         document.getElementById("back").style.backgroundColor="#333333";
-                        change("#804000","#994d00","#b35900"); //orange
+						change("#006080","#007399","#0086b3"); //aqua blue
                         break;
 
                 }
@@ -182,6 +195,8 @@
             }
 
             function wait(e){
+				piano=instance.createInstrument(notes[e].sound);
+				switch_bg(notes[e].sound);
                 piano.play(notes[e].note,notes[e].octave,2);
                 var v = notes[e].returnV;
                 if(document.getElementById(v)!='undefined'){
