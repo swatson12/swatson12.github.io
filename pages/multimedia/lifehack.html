@@ -21,6 +21,7 @@
 					<a href="lifehack.html">Life Hack Video</a>
 					<a href="3dmodel.html">3D Model</a>
 					<a href="final.html">Web Animation</a>
+					<a href="port.html">About Portfolio</a>
 				</div>
 		</div>
         <div class="dropdown" id="dropdown">
@@ -35,7 +36,7 @@
 		<div class="dropdown useful" id="dropdown">
 			<a class="drop-link" onclick="dropitems()">Useful Links</a>
 			<div class="dropitems" id="dropitems">
-				<a href="https://drive.google.com/drive/folders/0BzZqlKCDNdEgcHAyNnFJQ2swb3M?usp=sharing" target="_blank">UI Kit files</a>
+				<a href="" target="_blank">Life Hack files</a>
 			</div>
 		</div>
 	</nav>
@@ -43,7 +44,7 @@
 	<aside>
 	<h4>Useful Links</h4>
 	<ul>
-			<li><a href="https://drive.google.com/drive/folders/0BzZqlKCDNdEgcHAyNnFJQ2swb3M?usp=sharing" target="_blank">UI Kit files</a></li>
+			<li><a href="" target="_blank">Life Hack files</a></li>
 	</br></br>
 	</ul>
 	</aside>
@@ -56,18 +57,21 @@
 		<section class="about">
 			<h4 class ="subtitle" style="text-align:center; font-size:150%;" >Planning</h4>
 			<p>When I was planning the video, it took me a while to think of a topic for the video. I had thought about doing sometjing to do with the Raspberry Pi I was working on at the time, but it didn't seem very life hacky to me. I watched a number of life hack videos on Youtube for inspiration, so many so that I now can't escape the suggestions for life hack videos to watch. I decided to be cheeky about it and do a life hack everyone needs to do - drink water.</p>
-			<img src="../../images/lh1.jpg" class="ssimg v" id="1" ><img src="../../images/lh2.jpg" class="ssimg v" id="2">
+			<img src="../../images/lh1.jpg" class="ssimg v" id="1" onclick="img_click(1)"><img src="../../images/lh2.jpg" class="ssimg v" id="2"onclick="img_click(2)">
 			<div class="modal" id="js-modal">
 				<span class="close">&times;</span>
 				<img class="modal-content" id="img-zoom"/>
 			</div>
+			<br><br><br><br><br><br><br><br><br><br>
 		</section>
 
 		<section class="story">
 				<h4 class ="subtitle" style="text-align:center; font-size:150%;" >Putting it together</h4>
 				<p>Due to bad time management, I didn't have a whole lot of time to learn how to use a software like Adobe Premiere Pro or DaVinci Resolve, so I used an app on my iPhone I'm familiar with, Splice. It was easy because I had filmed the clips on my phone, so all I had to do was export the completed file and upload it to a cloud drive so I acould access it on the computer.</p>
 				<p>Splice doesn't have a functionality to add text to the video, so I downloaded a free software called OpenShot Video Editor. It was easy to use and it didn't require a login or payment to export an HD video. With OpenShot, I added the credits and the last transition. </p>
-				<img src="../../images/lh3.png" class="ssimg" id="4" ><img src="../../images/lh4.png" class="ssimg" id="3"><img src="../../images/lh5.png" class="ssimg" id="5">
+				<img src="../../images/lh3.png" class="ssimg s" id="4" onclick="img_click(4)">
+				<img src="../../images/lh4.png" class="ssimg s" id="3" onclick="img_click(3)">
+				<img src="../../images/lh5.png" class="ssimg s" id="5" onclick="img_click(5)">
 				<div class="modal" id="js-modal">
 						<span class="close">&times;</span>
 						<img class="modal-content" id="img-zoom"/>
@@ -102,12 +106,11 @@
 			var img4 = document.getElementById("4");
 			var img5 = document.getElementById("5");
 
-			function img_click(i){
+			function img_click(e){
+				i=document.getElementById(e);
 				if(i.classList.contains('v')){
 					modal_img.classList.add('v');
-					console.log("pl");
 				}else if(!i.classList.contains('v')){
-					console.log("lh");
 					modal_img.classList.remove('v');
 				}
 				i.onclick=function(){
@@ -122,11 +125,11 @@
 				modal.style.display="none";
 			}
 
-			img_click(img1);
+			/*img_click(img1);
 			img_click(img2);
 			img_click(img3);
 			img_click(img4);
-			img_click(img5);
+			img_click(img5);*/
 </script>
 </body>
 </html>
