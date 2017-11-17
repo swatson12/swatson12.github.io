@@ -51,15 +51,31 @@
 	<h1>Life Hack</h1>
 	</section><p class="subtitle">Otago Polytechnic Bachelor of IT - Multimedia Development - Semester 2 2017</p>
 	<section class="content">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/iq5T37ZGf7w" frameborder="0" allowfullscreen class="iframe"></iframe>
-<p class="line"></p>
-<section class="about">
-	<h4 class ="subtitle" style="text-align:center; font-size:150%;" >Planning</h4>
-	<p>When I was planning the video, it took me a while to think of a topic for the </p>
-</section>
-        </section>
-<script>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/iq5T37ZGf7w" frameborder="0" allowfullscreen class="iframe"></iframe>
+		<p class="line"></p>
+		<section class="about">
+			<h4 class ="subtitle" style="text-align:center; font-size:150%;" >Planning</h4>
+			<p>When I was planning the video, it took me a while to think of a topic for the video. I had thought about doing sometjing to do with the Raspberry Pi I was working on at the time, but it didn't seem very life hacky to me. I watched a number of life hack videos on Youtube for inspiration, so many so that I now can't escape the suggestions for life hack videos to watch. I decided to be cheeky about it and do a life hack everyone needs to do - drink water.</p>
+			<img src="../../images/lh1.jpg" class="ssimg v" id="1" ><img src="../../images/lh2.jpg" class="ssimg v" id="2">
+			<div class="modal" id="js-modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="img-zoom"/>
+			</div>
+		</section>
 
+		<section class="story">
+				<h4 class ="subtitle" style="text-align:center; font-size:150%;" >Putting it together</h4>
+				<p>Due to bad time management, I didn't have a whole lot of time to learn how to use a software like Adobe Premiere Pro or DaVinci Resolve, so I used an app on my iPhone I'm familiar with, Splice. It was easy because I had filmed the clips on my phone, so all I had to do was export the completed file and upload it to a cloud drive so I acould access it on the computer.</p>
+				<p>Splice doesn't have a functionality to add text to the video, so I downloaded a free software called OpenShot Video Editor. It was easy to use and it didn't require a login or payment to export an HD video. With OpenShot, I added the credits and the last transition. </p>
+				<img src="../../images/lh3.png" class="ssimg" id="4" ><img src="../../images/lh4.png" class="ssimg" id="3"><img src="../../images/lh5.png" class="ssimg" id="5">
+				<div class="modal" id="js-modal">
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img-zoom"/>
+				</div>
+		</section>
+	</section>
+
+<script>
 //making the menu responsive
 			function responsive_menu() {
 				var x = document.getElementById("nav");
@@ -74,6 +90,43 @@
 				var x=document.getElementById("dropitems");
 					console.log(x.classList.contains("dropitems"));
 			}
+
+			//example of making photo expand https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+			//making the images zoom
+			var modal = document.getElementById("js-modal");
+			var modal_img = document.getElementById("img-zoom");
+
+			var img1 = document.getElementById("1");
+			var img2 = document.getElementById("2");
+			var img3 = document.getElementById("3");
+			var img4 = document.getElementById("4");
+			var img5 = document.getElementById("5");
+
+			function img_click(i){
+				if(i.classList.contains('v')){
+					modal_img.classList.add('v');
+					console.log("pl");
+				}else if(!i.classList.contains('v')){
+					console.log("lh");
+					modal_img.classList.remove('v');
+				}
+				i.onclick=function(){
+					console.log(i);
+					modal.style.display="block";
+					modal_img.src=this.src;
+					}
+			}
+
+			var span=document.getElementsByClassName("close")[0];
+			span.onclick=function(){
+				modal.style.display="none";
+			}
+
+			img_click(img1);
+			img_click(img2);
+			img_click(img3);
+			img_click(img4);
+			img_click(img5);
 </script>
 </body>
 </html>

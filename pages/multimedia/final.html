@@ -92,22 +92,17 @@
 				<option value="edm">EDM</option>
 				<option value="organ">Organ</option>
 			</select>
-			<br><input type='submit' onclick=playback() id="btn" value="Play" disabled /><input type='submit' onclick=reset() value="Reset"/><p><span id="i"></span></span>
-			<p class="line"></p><br>
+			<br><br><input type='submit' onclick=playback() id="btn" value="Play" disabled /> <input type='submit' onclick=reset() value="Reset"/><p><span id="i"></span></span>
+			<p class="line"></p>
 				<section class="content">
-					<h4 class="subtitle" style="text-align:left; font-size:200%; padding-top:0;border:0;">About the Animation</h4>
-					<p>
-						For my web animation, I decided to do an abstract piano. I based it off an audio library I found called audiosynth. The library asks for a note, an octave and a "sound" (piano, EDM, organ or acoustic). I set the notes and octave statically in the html as it was way too hard to have it be set dynamically through user input. By selecting a sound in the dropdown, the keys change colour, or background, depending on the sound chosen.</p> <p>With the acoustic sound, I realised it sounded Chinese-like, so I made the colours and background reflect that. The other colours were chosen because they looked good against the background grey and they were all within the same shade. I decided to have the colours change depending on the sound so it was easy to differentiate between the sounds and have colours tied to them.</p><p>I decided to add the play button so users have the ability to listen back to the keys they pressed. On playback, the keys and sounds that have been used are remembered within the JavaScript so it's an accurate playback as possible. If I had time for further development, I would find a way to record the times between the key presses and have the playback reflect that.</p>
+					<h4 class="final" >About the Animation</h4>
+					<p>For my web animation, I decided to do an abstract piano. I based it off an audio library I found called audiosynth. The library asks for a note, an octave and a "sound" (piano, EDM, organ or acoustic). I set the notes and octave statically in the html as it was way too hard to have it be set dynamically through user input. By selecting a sound in the dropdown, the keys change colour, or background, depending on the sound chosen.</p> 
+					<p>With the acoustic sound, I realised it sounded Chinese-like, so I made the colours and background reflect that. The other colours were chosen because they looked good against the background grey and they were all within the same shade. I decided to have the colours change depending on the sound so it was easy to differentiate between the sounds and have colours tied to them.</p>
+					<p>I decided to add the play button so users have the ability to listen back to the keys they pressed. On playback, the keys and sounds that have been used are remembered within the JavaScript so it's an accurate playback as possible. If I had time for further development, I would find a way to record the times between the key presses and have the playback reflect that.</p>
+					<p>I didn't do any planning, I sort of banged around with code samples and added to it whenever I felt like I needed to work on it</p>
 					
 				</section>
 		</section>
-
-
-
-
-
-
-
 
 		<script>
 			//for piano
@@ -161,7 +156,6 @@
                         document.getElementById("back").style.backgroundColor="#333333";
 						change("#006080","#007399","#0086b3"); //aqua blue
                         break;
-
                 }
             }
 
@@ -178,14 +172,13 @@
             }
 
             //to playback the input
-            
             function playback(){
                 console.log(notes);
-                    for(var e=0; e<notes.length;e++){
-                        var t = 400*e;
-                        setTimeout(wait, (t),e);
-                        document.getElementById(notes[e].returnV).classList.remove("fadeIn");
-                }
+				for(var e=0; e<notes.length;e++){
+					var t = 400*e;
+					setTimeout(wait, (t),e);
+					document.getElementById(notes[e].returnV).classList.remove("fadeIn");
+				}	
             }
 
             function reset(){
@@ -220,7 +213,7 @@
 				i.onclick=function(){
 					modal.style.display="block";
 					modal_img.src=this.src;
-					}
+				}
 			}
 
 			var span=document.getElementsByClassName("close")[0];
@@ -231,7 +224,7 @@
 			img_click(img1);
 			img_click(img2);
 
-//making the menu responsive
+		//making the menu responsive
 			function responsive_menu() {
 				var x = document.getElementById("nav");
 				if (x.className === "n"||x.className==="dropdown") {
@@ -241,13 +234,14 @@
 						x.className = "n";
 				}
 			}
+
 			function dropitems(){
 				var x=document.getElementById("dropitems");
 					console.log(x.classList.contains("dropitems"));
 			}
 
-//accordian list
-//example at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol
+		//accordian list
+		//example at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol
 			var acc=document.getElementsByClassName("acc-button");
 			var i;
 
@@ -261,10 +255,8 @@
 					else{
 						panel.style.maxHeight=panel.scrollHeight+"px";
 					}
-
 				}
 			}
-
 		</script>
   </body>
 </html>

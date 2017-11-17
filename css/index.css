@@ -476,7 +476,23 @@ aside li{
 		width:40%;
 	}
 }
-
+.final{
+	font-family:nav;
+	text-align:left; 
+	font-size:200%; 
+	padding-top:0;
+	border:0;
+	margin-bottom:0;
+	padding-bottom:0;
+	margin-top:0;
+}
+.ssimg.v, .modal-content.v{
+	transform:rotate(90deg);
+	margin-top:5%;
+}
+.modal-content.v{
+	width:50%;
+}
 /*---------------------------------------------------| to make responsive |---------------------------------------------------------------*/
 @media only screen and (max-width: 900px){
     .modal-content {
