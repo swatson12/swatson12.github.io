@@ -140,8 +140,7 @@
                 switch(s){
                     case "piano":
                         change("#800080","#990099","#b300b3"); //purple
-                        document.getElementById("back").style.backgroundImage="none";
-                        document.getElementById("back").style.backgroundColor="#333333";
+						bg_default();
                         break;
                     case "acoustic":
                         change("#800000","#990000","#b30000"); //red
@@ -149,16 +148,19 @@
                         break;
                     case "edm":
                         change("#008000","#009900","#00b300"); //green
-                        document.getElementById("back").style.backgroundImage="none";
-                        document.getElementById("back").style.backgroundColor="#333333";
+						bg_default();
                         break;
                     case "organ":
-                        document.getElementById("back").style.backgroundImage="none";
-                        document.getElementById("back").style.backgroundColor="#333333";
 						change("#006080","#007399","#0086b3"); //aqua blue
+						bg_default();
                         break;
                 }
             }
+
+			function bg_default(){
+				document.getElementById("back").style.backgroundImage="none";
+				document.getElementById("back").style.backgroundColor="#333333";
+			}
 
             function change(c1,c2,c3){
                 var one=document.getElementsByClassName("one");
