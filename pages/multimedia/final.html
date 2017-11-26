@@ -166,7 +166,7 @@
                 var one=document.getElementsByClassName("one");
                 var two=document.getElementsByClassName("two");
                 var three=document.getElementsByClassName("three");
-				
+
 
                 for(var i=0;i<one.length;i++){
                     one[i].style.backgroundColor=c1;
@@ -196,7 +196,8 @@
 				switch_bg(notes[e].sound);
                 piano.play(notes[e].note,notes[e].octave,2);
                 var v = notes[e].returnV;
-                if(document.getElementById(v)!='undefined'){
+                if(document.getElementById(v)!='undefined')
+				{
                    setTimeout( flash, (0), v);
                    document.getElementById(v).classList.remove("fadeIn");
                 }
