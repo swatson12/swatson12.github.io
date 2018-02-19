@@ -25,6 +25,7 @@
 					<a href="lifehack.html">Life Hack Video</a>
 					<a href="3dmodel.html">3D Model</a>
 					<a href="final.html">Web Animation</a>
+					<a href="port.html">About Portfolio</a>
 				</div>
 		</div>
         <div class="dropdown" id="dropdown">
@@ -39,7 +40,7 @@
 		<div class="dropdown useful" id="dropdown">
 			<a class="drop-link" onclick="dropitems()">Useful Links</a>
 			<div class="dropitems" id="dropitems">
-				<a href="" target="_blank">UI Kit files</a>
+				<a href="" target="_blank">Web Animation files</a>
 			</div>
 		</div>
 	</nav>
@@ -47,7 +48,7 @@
 	<aside>
 	<h4>Useful Links</h4>
 	<ul>
-			<li><a href="" target="_blank">UI Kit files</a></li>
+			<li><a href="" target="_blank">Web Animation files</a></li>
 	</br></br>
 	</ul>
 	</aside>
@@ -139,8 +140,7 @@
                 switch(s){
                     case "piano":
                         change("#800080","#990099","#b300b3"); //purple
-                        document.getElementById("back").style.backgroundImage="none";
-                        document.getElementById("back").style.backgroundColor="#333333";
+						bg_default();
                         break;
                     case "acoustic":
                         change("#800000","#990000","#b30000"); //red
@@ -148,21 +148,25 @@
                         break;
                     case "edm":
                         change("#008000","#009900","#00b300"); //green
-                        document.getElementById("back").style.backgroundImage="none";
-                        document.getElementById("back").style.backgroundColor="#333333";
+						bg_default();
                         break;
                     case "organ":
-                        document.getElementById("back").style.backgroundImage="none";
-                        document.getElementById("back").style.backgroundColor="#333333";
 						change("#006080","#007399","#0086b3"); //aqua blue
+						bg_default();
                         break;
                 }
             }
+
+			function bg_default(){
+				document.getElementById("back").style.backgroundImage="none";
+				document.getElementById("back").style.backgroundColor="#333333";
+			}
 
             function change(c1,c2,c3){
                 var one=document.getElementsByClassName("one");
                 var two=document.getElementsByClassName("two");
                 var three=document.getElementsByClassName("three");
+
 
                 for(var i=0;i<one.length;i++){
                     one[i].style.backgroundColor=c1;
@@ -192,7 +196,8 @@
 				switch_bg(notes[e].sound);
                 piano.play(notes[e].note,notes[e].octave,2);
                 var v = notes[e].returnV;
-                if(document.getElementById(v)!='undefined'){
+                if(document.getElementById(v)!='undefined')
+				{
                    setTimeout( flash, (0), v);
                    document.getElementById(v).classList.remove("fadeIn");
                 }
@@ -222,6 +227,7 @@
 			}
 
 			img_click(img1);
+			
 			img_click(img2);
 
 		//making the menu responsive
