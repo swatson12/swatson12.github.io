@@ -22,6 +22,19 @@
 		var fiftyD  = 0;
 		var hundred  = 0;
 		var eft = 0;
+
+		var oneT = 0;
+		var twoT = 0;
+		var tenCT = 0;
+		var twentyCT = 0;
+		var fiftyCT = 0;
+		var fiveT = 0;
+		var tenDT = 0;
+		var twentyDT = 0;
+		var fiftyDT  = 0;
+		var hundredT  = 0;
+
+		
 			
 		function calc(){
 			
@@ -85,14 +98,22 @@
 					}
 				}
 			}
+			if(one>25){
+				oneT=one-25;
+			}
 			
 			var coinTotal;
 			var total = one + two + tenC + twentyC + fiftyC + five + tenD + twentyD + fiftyD + hundred;
+			var bankTotal = total-250;
 			var totalEft = one + two + tenC + twentyC + fiftyC + five + tenD + twentyD + fiftyD + hundred + eft; //total including eftpos
+
+			if(bankTotal<0){
+				bankTotal=0;
+			}
 			
 			document.getElementById("output").innerHTML=(	"Till Totals:<br>" +
 							"$2: $" + two +
-							"<br>$1: $" + one +
+							"<br>$1: $" + one +"  <span style='color:red;'>$"+oneT+"</span>"+
 							"<br>$0.50: $" + fiftyC +
 							"<br>$0.20: $" + twentyC +
 							"<br>$0.10: $" + tenC +
@@ -103,7 +124,7 @@
 							"<br>$5: $" + five + "\n "			
 						);	
 			
-			document.getElementById("output2").innerHTML=("<br><br>Total: $" + total + "<br>Total Eftpos: $" + eft + "<br>Total incl. Eftpos: $" + totalEft);
+			document.getElementById("output2").innerHTML=("<br><br>Total: $" + total + "<br>Total Eftpos: $" + eft + "<br>Total incl. Eftpos: $" + totalEft+"<br>Total to bank: $"+bankTotal);
 			}
 			
 			function change(input){
