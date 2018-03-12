@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Sam Watson - Online Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
 		<link rel="icon" type="image/jpg" href="images/bg.png">
 
@@ -12,12 +13,7 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<script>
-				$(document).ready(function(){	
-					$("body").fadeIn(1000).removeClass("hidden")
-					console.log("fade???")
-				})
-			</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body class="hidden">
@@ -26,15 +22,24 @@
 			<section class="content" >
 				<h1>Sam Watson</h1>
 				<nav>
-					<ul>
-					<li><a href="http://watssc2.pages.op-bit.nz/portfolio">Otago Polytechnic Bachelor of IT Portfolio</a></li></br>
-					<li><a href="pages/multimedia/multimedia.html">A Link</a></li>
-					<li><a href="pages/project/project.html">Another Link</a></li>
-					<li><a href="pages/main/about.html">About</a></li>
+					<ul id="uh">
 					</ul>
 				</nav>
 			</section>
+			<span class="glyphicon glyphicon-menu-down arrow"></span>
 
 
+			<script>
+
+					if($(window).width()<1000){
+						$("#uh").html('<li><a href="http://watssc2.pages.op-bit.nz/portfolio">Otago Polytechnic Bachelor of IT Portfolio</a></li><li><a href="pages/multimedia/multimedia.html">A Link</a></li><li><a href="pages/project/project.html">Another Link</a></li>	<li><a href="pages/main/about.html">About</a></li>')
+					}else{
+						$("#uh").html('<li><a href="http://watssc2.pages.op-bit.nz/portfolio">Otago Polytechnic Bachelor of IT Portfolio</a></li></br><li><a href="pages/multimedia/multimedia.html">A Link</a></li><li><a href="pages/project/project.html">Another Link</a></li>	<li><a href="pages/main/about.html">About</a></li>')
+					}
+					$(document).ready(function(){	
+						$("body").fadeIn(1000).removeClass("hidden")
+						console.log("fade???")
+					})
+				</script>
   </body>
 </html>
