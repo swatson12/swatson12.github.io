@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sam Watson - Online Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="../../css/index.css">
+		<link rel="stylesheet" type="text/css" href="swatson12.github.io/css/index.css">
+		<link rel="icon" type="image/jpg" href="../../images/back4.jpg">
+
+        <!-- audio js file from http://keithwhor.github.io/audiosynth/ -->
+        <!--css animation adapted from https://codepen.io/lehollandaisvolant/pen/dMQXYX?editors=0110 -->
+        <script src="audiosynth.js"></script>
+  </head>
+
+  <body>
+	<h1 class="top-header">Sam Watson - Online Portfolio</h1>
+	<nav class="n" id="nav">
+			<a class="m" onclick="responsive_menu()" >&#9776; Menu</a>
+		<a href="../../index.html">Home</a>
+		<a href="../soft en/softwareEng.html">Software Engineering </a>
+		<div class="dropdown" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Multimedia Development Portfolio</a></li> 	
+				<div class="dropitems" id="dropitems">
+					<a href="uikit.html">UI Kit</a>
+					<a href="soundscape.html">Soundscape</a>
+					<a href="lifehack.html">Life Hack Video</a>
+					<a href="3dmodel.html">3D Model</a>
+					<a href="final.html">Web Animation</a>
+					<a href="port.html">About Portfolio</a>
+				</div>
+		</div>
+        <div class="dropdown" id="dropdown">
+            <a class="drop-link" onclick="dropitems()">Project 1 Portfolio</a>
+            <div class="dropitems" id="dropitems">
+                <a href="../project/reflection.html">Reflection</a>
+                <a href="../project/timeline.html">Timeline</a>
+                <a href="../project/techpro.html">Technical and Professional Proficiency</a>
+            </div>
+        </div>
+		<a href="../main/about.html">CV</a>
+		<div class="dropdown useful" id="dropdown">
+			<a class="drop-link" onclick="dropitems()">Useful Links</a>
+			<div class="dropitems" id="dropitems">
+				<a href="" target="_blank">Web Animation files</a>
+			</div>
+		</div>
+	</nav>
+	
+	<aside>
+	<h4>Useful Links</h4>
+	<ul>
+			<li><a href="" target="_blank">Web Animation files</a></li>
+	</br></br>
+	</ul>
+	</aside>
+	<section class="title">
+	<h1>Web Animation</h1>
+	</section><p class="subtitle">Otago Polytechnic Bachelor of IT - Multimedia Development - Semester 2 2017</p>
+	<section class="content" style="text-align:center">
+		
+			<div id="back">
+				<div class="rect one" id="C#2" onmousedown="hover('C#',2)"></div>
+				<div class="rect one" id="D#2" onmousedown="hover('D#',2)"></div>
+				<div class="rect one" id="F2" onmousedown="hover('F' ,2)"></div>
+				<div class="rect one" id="G#2" onmousedown="hover('G#',2)"></div>
+				<div class="rect one" id="A#2" onmousedown="hover('A#',2)"></div>
+				<br>
+				<!---->
+				<div class="rect two" id="C#3" onmousedown="hover('C#',3)"></div>
+				<div class="rect two" id="D#3" onmousedown="hover('D#',3)"></div>
+				<div class="rect two" id="F3" onmousedown="hover('F' ,3)"></div>
+				<div class="rect two" id="G#3" onmousedown="hover('G#',3)"></div>
+				<div class="rect two" id="A#3" onmousedown="hover('A#',3)"></div>
+				<br>
+				<!---->
+				<div class="rect three" id="C#4" onmousedown="hover('C#',4)"></div>
+				<div class="rect three" id="D#4" onmousedown="hover('D#',4)"></div>
+				<div class="rect three" id="F4"  onmousedown="hover('F' ,4)"></div>
+				<div class="rect three" id="G#4" onmousedown="hover('G#',4)"></div>
+				<div class="rect three" id="A#4" onmousedown="hover('A#',4)"></div>
+				<!---->
+			</div>
+				<br><br>
+				<span id="instructions"><ul style="text-decoration: none;">
+				<li>Click on the coloured areas to play</li>
+				<li>Darker colour = lower note</li>
+				<li>Select a type of sound from the dropdown list</li>
+				<li>Press play to hear your tune back</li>
+			</ul>
+				<br>
+			Sound: <select id="select" onclick="select()" >
+				<option value="piano">Piano</option>
+				<option value="acoustic">Acoustic</option>
+				<option value="edm">EDM</option>
+				<option value="organ">Organ</option>
+			</select>
+			<br><br><input type='submit' onclick=playback() id="btn" value="Play" disabled /> <input type='submit' onclick=reset() value="Reset"/><p><span id="i"></span></span>
+			<p class="line"></p>
+				<section class="content">
+					<h4 class="final" >About the Animation</h4>
+					<p>For my web animation, I decided to do an abstract piano. I based it off an audio library I found called audiosynth. The library asks for a note, an octave and a "sound" (piano, EDM, organ or acoustic). I set the notes and octave statically in the html as it was way too hard to have it be set dynamically through user input. By selecting a sound in the dropdown, the keys change colour, or background, depending on the sound chosen.</p> 
+					<p>With the acoustic sound, I realised it sounded Chinese-like, so I made the colours and background reflect that. The other colours were chosen because they looked good against the background grey and they were all within the same shade. I decided to have the colours change depending on the sound so it was easy to differentiate between the sounds and have colours tied to them.</p>
+					<p>I decided to add the play button so users have the ability to listen back to the keys they pressed. On playback, the keys and sounds that have been used are remembered within the JavaScript so it's an accurate playback as possible. If I had time for further development, I would find a way to record the times between the key presses and have the playback reflect that.</p>
+					<p>I didn't do any planning, I sort of banged around with code samples and added to it whenever I felt like I needed to work on it</p>
+					
+				</section>
+		</section>
+
+		<script>
+			//for piano
+            var instance = new AudioSynth;
+            instance instanceof AudioSynth;
+            var piano = instance.createInstrument('piano'); //so piano sound is default
+            var n=[];
+            var notes=n;
+
+
+            function hover(note,octave){
+                piano.play(note, octave, 2); //note is the key note, octave is the octave of the note, 2 is the sound duration in seconds
+                document.getElementById("btn").disabled=false;
+                var s= document.getElementById("select").value;
+               
+                //to play back the notes
+                var t = {
+                    note:note,
+                    octave:octave,
+					sound:s,
+                    returnV:note+octave,
+                }
+                notes.push(t);
+              
+            }
+
+            function select(){
+                var s= document.getElementById("select").value;
+                piano = instance.createInstrument(s);
+				switch_bg(s);
+			}
+
+			function switch_bg(s){
+                switch(s){
+                    case "piano":
+                        change("#800080","#990099","#b300b3"); //purple
+						bg_default();
+                        break;
+                    case "acoustic":
+                        change("#800000","#990000","#b30000"); //red
+                        document.getElementById("back").style.backgroundImage="url('animation-bg.jpg')";
+                        break;
+                    case "edm":
+                        change("#008000","#009900","#00b300"); //green
+						bg_default();
+                        break;
+                    case "organ":
+						change("#006080","#007399","#0086b3"); //aqua blue
+						bg_default();
+                        break;
+                }
+            }
+
+			function bg_default(){
+				document.getElementById("back").style.backgroundImage="none";
+				document.getElementById("back").style.backgroundColor="#333333";
+			}
+
+            function change(c1,c2,c3){
+                var one=document.getElementsByClassName("one");
+                var two=document.getElementsByClassName("two");
+                var three=document.getElementsByClassName("three");
+
+
+                for(var i=0;i<one.length;i++){
+                    one[i].style.backgroundColor=c1;
+                    two[i].style.backgroundColor=c2;
+                    three[i].style.backgroundColor=c3;
+                }
+            }
+
+            //to playback the input
+            function playback(){
+                console.log(notes);
+				for(var e=0; e<notes.length;e++){
+					var t = 400*e;
+					setTimeout(wait, (t),e);
+					document.getElementById(notes[e].returnV).classList.remove("fadeIn");
+				}	
+            }
+
+            function reset(){
+                document.getElementById("btn").disabled=true;
+                notes=[];
+                console.log(notes);
+            }
+
+            function wait(e){
+				piano=instance.createInstrument(notes[e].sound);
+				switch_bg(notes[e].sound);
+                piano.play(notes[e].note,notes[e].octave,2);
+                var v = notes[e].returnV;
+                if(document.getElementById(v)!='undefined')
+				{
+                   setTimeout( flash, (0), v);
+                   document.getElementById(v).classList.remove("fadeIn");
+                }
+            }
+
+            function flash(v){
+               document.getElementById(v).classList.add("fadeIn");
+            }
+
+			//example of making photo expand https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+			//making the images zoom
+			var modal = document.getElementById("js-modal");
+			var img1 = document.getElementById("uikit");
+			var img2 = document.getElementById("planning");
+			var modal_img = document.getElementById("img-zoom");
+
+			function img_click(i){
+				i.onclick=function(){
+					modal.style.display="block";
+					modal_img.src=this.src;
+				}
+			}
+
+			var span=document.getElementsByClassName("close")[0];
+			span.onclick=function(){
+				modal.style.display="none";
+			}
+
+			img_click(img1);
+			
+			img_click(img2);
+
+		//making the menu responsive
+			function responsive_menu() {
+				var x = document.getElementById("nav");
+				if (x.className === "n"||x.className==="dropdown") {
+					console.log(x.className);
+						x.className += " responsive";
+				} else {
+						x.className = "n";
+				}
+			}
+
+			function dropitems(){
+				var x=document.getElementById("dropitems");
+					console.log(x.classList.contains("dropitems"));
+			}
+
+		//accordian list
+		//example at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol
+			var acc=document.getElementsByClassName("acc-button");
+			var i;
+
+			for(i=0;i<acc.length;i++){
+				acc[i].onclick=function(){
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if(panel.style.maxHeight){
+						panel.style.maxHeight=null;
+					}
+					else{
+						panel.style.maxHeight=panel.scrollHeight+"px";
+					}
+				}
+			}
+		</script>
+  </body>
+</html>
