@@ -19,8 +19,10 @@
     <body>
         <div id="names">
         </div>
-        <div id="note"></div>
+        <div id="note">
 
+            
+        </div>
         <script async>
             var json;
             $("#note").hide();
@@ -42,7 +44,14 @@
                 var info=json[name]
                 $("#names").hide()
             $("#note").show();
-                $("#note").append("<img src='"+info.icon+"' class='icon'></br><h2>"+name+"</h2><h4>"+info.handle+"</h4><p>"+info.note+"</p>")
+                $("#note").append("<img src='"+info.icon+"' class='icon'></br><h2>"+name+"</h2><h4>"+info.handle+"</h4><p>"+info.note+"</p></br></br><div class='btn back' onclick='back()'><span class='glyphicon glyphicon-menu-left arrow'></span> go back!</div>")
+            }
+
+            function back(){
+            $("#note").hide().html("");
+            
+            $("#names").show();
+
             }
 
             /**/
