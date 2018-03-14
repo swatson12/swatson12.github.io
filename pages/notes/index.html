@@ -19,9 +19,11 @@
     <body>
         <div id="names">
         </div>
+        <div id="note"></div>
 
         <script async>
             var json;
+            $("#note").hide();
             $(window).on('load', function(){
                 $.getJSON("data.json", function(data){
                     json=data
@@ -29,10 +31,21 @@
             console.log(json)
                     console.log("done!")
                    var names= _.keys(json)
-                    for(var t in names )
-                    $("#names").append("<img src='"+json[names[t]].icon+"' class='icon'></br>")
+                    for(var t in names ){
+                        $('#names').append("<div class='btn' value='"+names[t]+"' onclick='btnClick(\""+names[t]+"\")'>"+names[t]+"</div></br>")
+                    }
+                   
                 })
             })
+
+            function btnClick(name){
+                var info=json[name]
+                $("#names").hide()
+            $("#note").show();
+                $("#note").append("<img src='"+info.icon+"' class='icon'></br><h2>"+name+"</h2><h4>"+info.handle+"</h4><p>"+info.note+"</p>")
+            }
+
+            /**/
 
         </script>
     </body>

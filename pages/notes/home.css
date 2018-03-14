@@ -1,9 +1,8 @@
 body{
     background-color:black;
-    color:#BFFF00;
-    font-size:200%
+    color:white;
 }
-#names{
+#names,#note{
     padding-top:5%;
     text-align: center;
     margin:0 auto;
@@ -14,3 +13,17 @@ body{
     border:white 2px solid;
     margin:5px;
 }
+
+.btn{
+    border:white 2px solid;
+    background-color: black;
+    padding:10px;
+    margin:15px;
+}
+
+.btn:hover, .btn:active{
+    background-color: white;
+    border:black 2px solid;
+    color:black;
+}
+
