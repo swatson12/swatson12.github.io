@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Victim Notes!</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="home.css">
+        
+        <script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="underscore.min.js"></script>
+    </head>
+
+    <body>
+        <div id="names">
+        </div>
+
+        <script async>
+            var json;
+            $(window).on('load', function(){
+                $.getJSON("data.json", function(data){
+                    json=data
+                }).done(function(){
+            console.log(json)
+                    console.log("done!")
+                   var names= _.keys(json)
+                    for(var t in names )
+                    $("#names").append("<img src='"+json[names[t]].icon+"' class='icon'></br>")
+                })
+            })
+
+        </script>
+    </body>
+</html>
