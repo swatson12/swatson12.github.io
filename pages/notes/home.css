@@ -24,7 +24,7 @@ body{
     margin:15px;
 }
 
-.btn:hover, .btn:active{
+.btn:hover{
     background-color: white;
     border:black 2px solid;
     color:black;
