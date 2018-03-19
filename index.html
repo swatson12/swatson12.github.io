@@ -3,7 +3,9 @@
   <head>
     <title>Sam Watson - Online Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+		<!--<link rel="stylesheet" type="text/css" href="css/home.css">-->
+    <link rel="stylesheet" type="text/css" href="css/new.css">
+		
 		<link rel="icon" type="image/jpg" href="images/bg.png">
 
 		<script
@@ -18,16 +20,16 @@
 
   <body class="hidden">
 		<!--<img src="images/loading.gif" id="loading">-->
-		<img src="images/bg.png" id="image" >
-			<section class="content" >
+	
+			<section class="content"id="image" >
 				<h1>Sam Watson</h1>
 				<nav>
 					<ul id="uh">
 					</ul>
 				</nav>
+				<span class="glyphicon glyphicon-menu-down arrow" onclick="arrowClick()"></span>
 			</section>
-			<span class="glyphicon glyphicon-menu-down arrow"></span>
-
+<div id="second">next</div>
 
 			<script>
 
@@ -40,6 +42,12 @@
 						$("body").fadeIn(1000).removeClass("hidden")
 						console.log("fade???")
 					})
+
+					function arrowClick(){
+						var scrollHeight = $('#image').height();
+					$("HTML, BODY").animate({ scrollTop: scrollHeight
+						}, 1000);
+					}
 				</script>
   </body>
 </html>
