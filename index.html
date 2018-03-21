@@ -20,8 +20,8 @@
 
   <body class="hidden">
 		<!--<img src="images/loading.gif" id="loading">-->
-	
-			<section class="content"id="image" >
+	<header><h1>Sam Watson</h1></header>
+			<section class="content" id="image" >
 				<h1>Sam Watson</h1>
 				<nav>
 					<ul id="uh">
@@ -32,7 +32,6 @@
 <div id="second">next</div>
 
 			<script>
-
 					if($(window).width()<1000){
 						$("#uh").html('<li><a href="http://watssc2.pages.op-bit.nz/portfolio">Otago Polytechnic Bachelor of IT Portfolio</a></li><li><a href="pages/multimedia/multimedia.html">A Link</a></li><li><a href="pages/project/project.html">Another Link</a></li>	<li><a href="pages/main/about.html">About</a></li>')
 					}else{
@@ -43,8 +42,14 @@
 						console.log("fade???")
 					})
 
+
+						
+				$('header').hide()
+
+				
 					function arrowClick(){
-						var scrollHeight = $('#image').height();
+				$('header').show()
+			var scrollHeight = $('#image').height();
 					$("HTML, BODY").animate({ scrollTop: scrollHeight
 						}, 1000);
 					}
