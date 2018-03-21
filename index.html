@@ -23,31 +23,41 @@
 	
 			<section class="content"id="image" >
 				<h1>Sam Watson</h1>
-				<nav>
-					<ul id="uh">
-					</ul>
+				<nav id="uh">
 				</nav>
 				<span class="glyphicon glyphicon-menu-down arrow" onclick="arrowClick()"></span>
 			</section>
-<div id="second">next</div>
-
+			<div id='header'><h1>Sam Watson</h1></div>
+<section id="second">
+	next</section>
 			<script>
 
 					if($(window).width()<1000){
-						$("#uh").html('<li><a href="http://watssc2.pages.op-bit.nz/portfolio">Otago Polytechnic Bachelor of IT Portfolio</a></li><li><a href="pages/multimedia/multimedia.html">A Link</a></li><li><a href="pages/project/project.html">Another Link</a></li>	<li><a href="pages/main/about.html">About</a></li>')
+						$("#uh").html('<subtitle>aspiring web developer</br><i>//</i></br>bachelor of it student</subtitle>')
 					}else{
-						$("#uh").html('<li><a href="http://watssc2.pages.op-bit.nz/portfolio">Otago Polytechnic Bachelor of IT Portfolio</a></li></br><li><a href="pages/multimedia/multimedia.html">A Link</a></li><li><a href="pages/project/project.html">Another Link</a></li>	<li><a href="pages/main/about.html">About</a></li>')
+						$("#uh").html('<subtitle>aspiring web developer<i>//</i> bachelor of it student</subtitle>')
 					}
 					$(document).ready(function(){	
 						$("body").fadeIn(1000).removeClass("hidden")
 						console.log("fade???")
 					})
+					$("#header").hide()
 
 					function arrowClick(){
 						var scrollHeight = $('#image').height();
-					$("HTML, BODY").animate({ scrollTop: scrollHeight
+					$("html, body").animate({ scrollTop: scrollHeight
 						}, 1000);
 					}
+
+					$(window).scroll(function(e){
+						if(($(this).scrollTop())<($('#image').height()-105)){
+							$('#header').fadeOut(500)
+						}
+						else{
+							$('#header').fadeIn(1000)
+						}
+					})
+
 				</script>
   </body>
 </html>
