@@ -49,13 +49,35 @@
 .content a {
     color:white;
 }
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
 
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
 .arrow{
-    margin-top:15%;
-color:white;
-left:45%;
-font-size: 150% !important;
-z-index: 1000;
+    margin-top:10%;
+    color:white;
+    left:45%;
+    font-size: 150% !important;
+    z-index: 1000;
 }
 .arrow:hover{
     cursor: pointer;
@@ -63,7 +85,25 @@ z-index: 1000;
 
 #second{
     padding-top:100vh;
-    height:200vh;
+    height:400vh;
+    padding-top:20%;
+}
+
+#header{
+    width:100%;
+    background-color: #333;
+    margin-top:0 !important; position:fixed;
+    top:0;
+    display:none;
+}
+#header h1{
+    margin-top:0 !important;
+    color:white;
+    font-family: header1;
+    font-size: 400%;
+    padding-left: 40px;
+    padding-top:10px;
+
 }
 
 header{
@@ -87,4 +127,14 @@ header h1{
     .content nav{
         margin-left: 30%;
     }
+
+    .content h1{
+        font-size:400%;
+        transform: translate(60%, 50%);
+    }
+    #header h1{
+        font-size: 300%;
+        padding-left:20px;
+    }
+
 }

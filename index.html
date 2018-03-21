@@ -1,58 +1,107 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Sam Watson - Online Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<!--<link rel="stylesheet" type="text/css" href="css/home.css">-->
-    <link rel="stylesheet" type="text/css" href="css/new.css">
-		
-		<link rel="icon" type="image/jpg" href="images/bg.png">
 
-		<script
-		src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		crossorigin="anonymous"></script>
+<head>
+	<title>Sam Watson - Online Portfolio</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/home.css">-->
+	<link rel="stylesheet" type="text/css" href="css/new.css">
+
+	<link rel="icon" type="image/jpg" href="images/bg.png">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body class="hidden">
+	<!--<img src="images/loading.gif" id="loading">-->
 	
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<section class="content" id="image">
+		<h1>Sam Watson</h1>
+		<nav id="uh">
+		</nav>
+		<span class="glyphicon glyphicon-menu-down arrow" onclick="arrowClick()"></span>
+	</section>
+	<div id='header'>
+		<h1>Sam Watson</h1>
+	</div>
+	<section id="second">
+		<div id='accordian'>
+		<button class="accordion">About</button>
+		<div class="panel">hi</div>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
+		<button class="accordion">Experience</button>
+		<div class="panel">howdy</div>
 
-  <body class="hidden">
-		<!--<img src="images/loading.gif" id="loading">-->
-	<header><h1>Sam Watson</h1></header>
-			<section class="content" id="image" >
-				<h1>Sam Watson</h1>
-				<nav>
-					<ul id="uh">
-					</ul>
-				</nav>
-				<span class="glyphicon glyphicon-menu-down arrow" onclick="arrowClick()"></span>
-			</section>
-<div id="second">next</div>
-
-			<script>
-					if($(window).width()<1000){
-						$("#uh").html('<li><a href="http://watssc2.pages.op-bit.nz/portfolio">Otago Polytechnic Bachelor of IT Portfolio</a></li><li><a href="pages/multimedia/multimedia.html">A Link</a></li><li><a href="pages/project/project.html">Another Link</a></li>	<li><a href="pages/main/about.html">About</a></li>')
-					}else{
-						$("#uh").html('<li><a href="http://watssc2.pages.op-bit.nz/portfolio">Otago Polytechnic Bachelor of IT Portfolio</a></li></br><li><a href="pages/multimedia/multimedia.html">A Link</a></li><li><a href="pages/project/project.html">Another Link</a></li>	<li><a href="pages/main/about.html">About</a></li>')
-					}
-					$(document).ready(function(){	
-						$("body").fadeIn(1000).removeClass("hidden")
-						console.log("fade???")
-					})
+		<button class="accordion">Contact</button>
+		<div class="panel">a number</div>
+</div>
+	</section>
 
 
-						
-				$('header').hide()
 
-				
-					function arrowClick(){
-				$('header').show()
+
+	<script>
+			$("#header").hide()
+			$("#accordian").hide()
+		if ($(window).width() < 1000) {
+			$("#uh").html('<subtitle>aspiring web developer</br><i>//</i></br>bachelor of it student</subtitle>')
+		} else {
+			$("#uh").html('<subtitle>aspiring web developer<i>//</i> bachelor of it student</subtitle>')
+		}
+
+		$(document).ready(function () {
+			$("body").fadeIn(1000).removeClass("hidden")
+			console.log("fade???")
+			
+		})
+
+		function arrowClick() {
+			
 			var scrollHeight = $('#image').height();
-					$("HTML, BODY").animate({ scrollTop: scrollHeight
-						}, 1000);
-					}
-				</script>
-  </body>
+			$("html, body").animate({
+				scrollTop: scrollHeight
+			}, 1000);
+		}
+
+
+		$(window).scroll(function (e) {
+			if (($(this).scrollTop()) < ($('#image').height() - 105)) {
+				$('#header').fadeOut(500)
+				$("#accordian").css("padding-top",$('#image').height())
+			}
+			else {
+				
+				$('#header').fadeIn(1000);
+				var padding=($('#image').height())
+				$("#accordian").css("padding-top",padding)
+				$("#accordian").fadeIn(1000)
+			}
+		})
+
+		/*accordian*/
+		var acc = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
+
+		
+
+	</script>
+</body>
+
 </html>
