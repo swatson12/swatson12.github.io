@@ -53,7 +53,7 @@
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    padding: 7%;
     width: 100%;
     border: none;
     text-align: left;
@@ -67,7 +67,7 @@
 }
 
 .panel {
-    padding: 0 18px;
+    padding: 10%;
     display: none;
     background-color: white;
     overflow: hidden;
@@ -84,8 +84,7 @@
 }
 
 #second{
-    padding-top:100vh;
-    height:400vh;
+    height:187vh;
     padding-top:20%;
 }
 

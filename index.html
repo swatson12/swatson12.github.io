@@ -19,7 +19,7 @@
 
 <body class="hidden">
 	<!--<img src="images/loading.gif" id="loading">-->
-	
+
 	<section class="content" id="image">
 		<h1>Sam Watson</h1>
 		<nav id="uh">
@@ -31,23 +31,23 @@
 	</div>
 	<section id="second">
 		<div id='accordian'>
-		<button class="accordion">About</button>
-		<div class="panel">hi</div>
+			<button class="accordion">About</button>
+			<div class="panel">hi</div>
 
-		<button class="accordion">Experience</button>
-		<div class="panel">howdy</div>
+			<button class="accordion">Experience</button>
+			<div class="panel">howdy</div>
 
-		<button class="accordion">Contact</button>
-		<div class="panel">a number</div>
-</div>
+			<button class="accordion">Contact</button>
+			<div class="panel">a number</div>
+		</div>
 	</section>
 
 
 
 
 	<script>
-			$("#header").hide()
-			$("#accordian").hide()
+		$("#header").hide()
+		$("#accordian").hide()
 		if ($(window).width() < 1000) {
 			$("#uh").html('<subtitle>aspiring web developer</br><i>//</i></br>bachelor of it student</subtitle>')
 		} else {
@@ -56,12 +56,12 @@
 
 		$(document).ready(function () {
 			$("body").fadeIn(1000).removeClass("hidden")
-			console.log("fade???")
-			
+			$("#second").css("padding-top", $('#image').height())
+			//$("#second").css('height', $('#image').height())
+
 		})
 
 		function arrowClick() {
-			
 			var scrollHeight = $('#image').height();
 			$("html, body").animate({
 				scrollTop: scrollHeight
@@ -70,15 +70,14 @@
 
 
 		$(window).scroll(function (e) {
-			if (($(this).scrollTop()) < ($('#image').height() - 105)) {
+			if (($(this).scrollTop()) < ($('#image').height() - 100)) {
 				$('#header').fadeOut(500)
-				$("#accordian").css("padding-top",$('#image').height())
+				/*	var padding=($('#image').height()/4)+($("#image").height()/2)
+					$("#accordian").css("padding-top",padding)*/
 			}
 			else {
-				
+
 				$('#header').fadeIn(1000);
-				var padding=($('#image').height())
-				$("#accordian").css("padding-top",padding)
 				$("#accordian").fadeIn(1000)
 			}
 		})
@@ -86,20 +85,20 @@
 		/*accordian*/
 		var acc = document.getElementsByClassName("accordion");
 
-for (var i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-}
+		for (var i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			});
+		}
 
 
-		
+
 
 	</script>
 </body>
