@@ -46,7 +46,6 @@
 
 
 	<script>
-		$("#header").hide()
 		$("#accordian").hide()
 		if ($(window).width() < 1000) {
 			$("#uh").html('<subtitle>aspiring web developer</br><i>//</i></br>bachelor of it student</subtitle>')
@@ -62,22 +61,23 @@
 		})
 
 		function arrowClick() {
-			var scrollHeight = $('#image').height();
-			$("html, body").animate({
+			/*var scrollHeight =*/ 
+			$(window).scrollTop($('#image').height());
+			/*$("html, body").animate({
 				scrollTop: scrollHeight
-			}, 1000);
+			}, 1000);*/
 		}
 
 
 		$(window).scroll(function (e) {
 			if (($(this).scrollTop()) < ($('#image').height() - 100)) {
-				$('#header').fadeOut(500)
-				/*	var padding=($('#image').height()/4)+($("#image").height()/2)
-					$("#accordian").css("padding-top",padding)*/
+				//$('#header').fadeOut(500)
+					//var padding=($('#image').height()/*/4)+($("#image").height()/2*/)
+					//$("#accordian").css("padding-top",padding)
 			}
 			else {
 
-				$('#header').fadeIn(1000);
+//$('#header').fadeIn(1000);
 				$("#accordian").fadeIn(1000)
 			}
 		})
