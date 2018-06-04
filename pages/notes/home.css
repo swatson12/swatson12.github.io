@@ -15,12 +15,25 @@ body{
 }
 #created{
     float:right;
-    color:white
+    color:white;
+    text-align: center;
     
 }
 #created img{
-    width:10%;
+    width:20%;
+    display: inline;
+    border:1px white solid;
+    padding:5px;
+    border-radius: 50%;
+    
 
+}
+#created a{
+    color:#f171da;
+}
+#created a:hover{
+    color:#989dfc;
+    text-decoration: none;
 }
 
 .back{
