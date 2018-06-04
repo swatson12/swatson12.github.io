@@ -31,7 +31,7 @@
                     console.log("done!")
                    var names= _.keys(json)
                     for(var t in names ){
-                        $('#names').append("<div class='btn' value='"+names[t]+"' onclick='btnClick(\""+names[t]+"\")'>"+names[t]+"</div></br>")
+                        $('#names').append("<div class='btn' value='"+names[t]+"' id='"+names[t]+"' onclick='btnClick(\""+names[t]+"\")'>"+names[t]+"</div></br>")
                     }
                    
                 })
