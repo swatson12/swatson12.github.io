@@ -8,11 +8,20 @@ body{
     margin:0 auto;
 }
 .icon{
-    width:50%;
+    width:40%;
     padding:10px;
     border:white 2px solid;
     margin:5px;
 }
+#created{
+    float:right;
+    
+}
+#created img{
+    width:10%;
+
+}
+
 .back{
     bottom:20px;
 }
