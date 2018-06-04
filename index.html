@@ -25,37 +25,44 @@
 		<nav id="uh">
 		<subtitle>bachelor of it student</subtitle>
 		</nav>
-		<span class="glyphicon glyphicon-menu-down arrow" onclick="arrowClick()"></span>
+		<span class="glyphicon glyphicon-menu-down arrow"></span>
 	</section>
 	<div id='header'>
 		<h1>Sam Watson</h1>
 	</div>
-	<section id="second">
+	
+	<section id="second"><div class="container">
+  <div class="row">
 		<div id='accordian'>
+			 <div class="col-sm">
 			<button class="accordion">About</button>
-			<div class="panel">I'm Samantha Watson. I'm about to graduate from the Bachelor of Information Technology at Otago Polytechnic. For the last year and a half I have been focused mostly on web and Android development through the Third Year Project part of the degree. I'm enthusastic about my work and I really enjoy learning new wyas of achieving goals and I'm good at adapting to any circumstance. </div>
+			<div class="panel">I'm Samantha Watson. I'm about to graduate from the Bachelor of Information Technology at Otago Polytechnic. For the last year and a half I have been focused mostly on web and Android development through the Third Year Project part of the degree. I'm enthusastic about my work and I really enjoy learning new wyas of achieving goals and I'm good at adapting to any circumstance. </div></div>
 
-			<button class="accordion">Experience</button>
+ <div class="col-sm">
+			<button class="accordion">Main Projects</button>
 			<div class="panel">
-				I have worked on a number of projects through the Third Year Project and also through some freelance work.
+				I have worked on a number of projects through the Third Year Project and extracurricular work.
 				<ul>
-					<li><a href="https://swatson12.github.io/jacinta-and-seans-wedding">Jacinta and Sean's Wedding</a> - I created this single page site for my friends who are getting married next May in Rarotonga. They wanted a different way of informing their guests of what was happening for their wedding. </li>
-					<li><a href="https://swatson12.github.io/pages/notes/index.html">Nice Notes </a> - In early 2018, my friends and I were complimenting each other, and instead of writing down what I had to say and taking a picture of it, I created this single page site to say what I wanted. I made a JSON file that was read into the page and dynamically created the entries. </li>
-					<li><a href="https://shar.es/an2U41">ODT article about AYA App</a> - As a part of the Third Year Project, I was involved with helping develop a prototype of an app that the Design School at Otago Polytechnic had designed. The app is aimed at youth who have had a terminal illness and are going overseas. The app holds their medical information so if something were to happen while overseas, they'd have their information readily accessible. Martn Kean, the Design School Lecturer and I were interviewed by the Otago Daily Times during Tech Week about the app.</li>
-					<li>
+					<li><b><a href="https://swatson12.github.io/jacinta-and-seans-wedding">Jacinta and Sean's Wedding</a></b> - I created this single page site for my friends who are getting married next May in Rarotonga. They wanted a different way of informing their guests of what was happening for their wedding. </li>
+					<li><b><a href="https://swatson12.github.io/pages/notes/index.html">Nice Notes</a></b> - In early 2018, my friends and I were complimenting each other, and instead of writing down what I had to say and taking a picture of it, I created this single page site to say what I wanted. I made a JSON file that was read into the page and dynamically created the entries. </li>
+					<li><b><a href="https://shar.es/an2U41">ODT article about AYA App</a></b> - As a part of the Third Year Project, I was involved with helping develop a prototype of an app that the Design School at Otago Polytechnic had designed. The app is aimed at youth who have had a terminal illness and are going overseas. The app holds their medical information so if something were to happen while overseas, they'd have their information readily accessible. Martn Kean, the Design School Lecturer and I were interviewed by the Otago Daily Times during Tech Week about the app.</li>
+					<li><b>Dot</b> - for Tech Week 2018, myself and three others were asked to make a robot that asked questions and recorded people's answers. We had about 4 weeks before Tech Week to get the robot working, so instead of having complicated parts, we had the robot be controlled by an Arduino, and an Android app for the recording and talking part. My focus was the app and what we created ended up being pretty awesome.</lu>
+			</div>
 			</div>
 
-
+ <div class="col-sm">
 			<button class="accordion">Contact</button>
-			<div class="panel">a number</div>
-		</div>
+			<div class="panel">Feel free to get in contact with me:
+				<ul><li>Phone number: <a href="tel:+64273854182">027 385 4182</a></li>
+				<li>Email: <a href="mailto:watson.sammy@gmail.com">watson.sammy@gmail.com</a></li></ul>
+			</div>
+		</div></div></div></div>
 	</section>
 
 
 
 
 	<script>
-		$("#accordian").hide()
 		$(document).ready(function () {
 			$("body").fadeIn(1000).removeClass("hidden")
 			$("#second").css("padding-top", $('#image').height())
@@ -63,13 +70,14 @@
 
 		})
 
-		function arrowClick() {
-			/*var scrollHeight =*/ 
-			$(window).scrollTop($('#image').height());
-			/*$("html, body").animate({
-				scrollTop: scrollHeight
-			}, 1000);*/
-		}
+		$(".arrow").click(function (){
+			console.log("SCROLL")
+			$('html, body').animate({
+				scrollTop:$(".container").offset().top
+			},1000)
+
+		
+		})
 
 
 		$(window).scroll(function (e) {

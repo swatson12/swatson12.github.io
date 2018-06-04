@@ -17,7 +17,9 @@
     background-size: cover;
     opacity: 0.9;
 }
-
+.container{
+    padding-bottom: 10%;
+}
 .content h1{
     font-family: header1;  
     font-size: 1000%;
@@ -72,11 +74,12 @@
 
 .panel {
     padding: 5%;
+    padding-bottom: 1%;
     padding-top:2%;
     display: none;
-    background-color: white;
     overflow: hidden;
-    background-color: #e2ddde;
+    background-color: rgba(226,221,222,0.22);
+    border-bottom: #713647 4px solid;
 }
 .arrow{
     margin-top:10%;
@@ -87,11 +90,6 @@
 }
 .arrow:hover{
     cursor: pointer;
-}
-
-#second{
-    height:187vh;
-    padding-top:20%;
 }
 
 #header{
