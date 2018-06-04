@@ -6,7 +6,7 @@
 	font-family:nav;
 	src:url(../fonts/cl.ttf);
     }
-
+ 
 #image{
     background-image:url("../images/bg.png");
     width:100%;
@@ -33,7 +33,7 @@
     margin-left: 28%;
    text-align:center; 
    margin-top:5%;
-   margin-left: 28%;
+   margin-left: 25%;
    width:40%;
     font-family: nav;
     text-decoration: none;

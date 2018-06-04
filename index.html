@@ -23,6 +23,7 @@
 	<section class="content" id="image">
 		<h1>Sam Watson</h1>
 		<nav id="uh">
+		<subtitle>bachelor of it student</subtitle>
 		</nav>
 		<span class="glyphicon glyphicon-menu-down arrow" onclick="arrowClick()"></span>
 	</section>
@@ -32,10 +33,16 @@
 	<section id="second">
 		<div id='accordian'>
 			<button class="accordion">About</button>
-			<div class="panel">hi</div>
+			<div class="panel">I'm Samantha Watson. I'm about to graduate from the Bachelor of Information Technology at Otago Polytechnic. For the last year and a half I have been focused mostly on web and Android development through the Third Year Project part of the degree. I'm enthusastic about my work and I really enjoy learning new wyas of achieving goals and I'm good at adapting to any circumstance. </div>
 
 			<button class="accordion">Experience</button>
-			<div class="panel">howdy</div>
+			<div class="panel">
+				I have worked on a number of projects through the Third Year Project and also through some freelance work.
+				<ul>
+					<li><a href="https://swatson12.github.io/jacinta-and-seans-wedding">Jacinta and Sean's Wedding</a> - I created this single page site for my friends who are getting married next May in Rarotonga. They wanted a different way of informing their guests of what was happening for their wedding. </li>
+					<li><a href="https://swatson12.github.io/pages/notes/index.html">In early 2018, my friends and I were complimenting each other, and instead of writing down what I had to say and taking a picture of it, I created this single page site to say what I wanted. I made a JSON file that was read into the page and dynamically created the entries. 
+			</div>
+
 
 			<button class="accordion">Contact</button>
 			<div class="panel">a number</div>
@@ -47,12 +54,6 @@
 
 	<script>
 		$("#accordian").hide()
-		if ($(window).width() < 1000) {
-			$("#uh").html('<subtitle>aspiring web developer</br><i>//</i></br>bachelor of it student</subtitle>')
-		} else {
-			$("#uh").html('<subtitle>aspiring web developer<i>//</i> bachelor of it student</subtitle>')
-		}
-
 		$(document).ready(function () {
 			$("body").fadeIn(1000).removeClass("hidden")
 			$("#second").css("padding-top", $('#image').height())
