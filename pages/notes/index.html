@@ -8,6 +8,8 @@
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="home.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        
         
         <script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -15,6 +17,7 @@
 		crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="underscore.min.js"></script>
+        
     </head>
 
     <body>
@@ -37,7 +40,7 @@
             var json;
             $("#note").hide();
             $(window).on('load', function(){
-               $.getJSON("data.json", function(data){
+              $.getJSON("data.json", function(data){
                     json=data
                 }).done(function(){
                     console.log("done!")
@@ -50,14 +53,14 @@
                     }
                 })
                    
-              })
+            })
         
 
             function btnClick(name){
                 var info=json[name]
                 $("#names").hide()
             $("#note").show();
-                $("#note").append("<img src='"+info.icon+"' class='icon' style='border-color:"+info.colour+"'></br><h2>"+name+"</h2><h4 style='color:"+info.colour+"'>"+info.handle+"</h4><p class='col-8'>"+info.note+"</p></br><div class='btn back' onclick='back()'><span class='glyphicon glyphicon-menu-left arrow'></span> go back!</div>")
+                $("#note").append("<img src='"+info.icon+"' class='icon' style='border-color:"+info.colour+"'></br><h2>"+name+"</h2><h4 style='color:"+info.colour+"'>"+info.handle+"</h4><p class='col-8'>"+info.note+"</p></br><div class='btn back' onclick='back()'><span class='fa fa-angle-left arrow'></span>  go back!</div>")
 
             }
 
