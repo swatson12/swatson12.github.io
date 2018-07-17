@@ -38,7 +38,7 @@
                     json=data
                 }).done(function(){
                     console.log("done!")
-                   /* json='{"dorie":{"handle":"@ronnievanngucci", "note":"dorie! i think we\'ve been following each other for like two weeks max, but you\'re so cool and like you said, i love that you love niall and read my mind. god i can\'t wait to see that dumb song. you\'re so awesome and i can\'t wait to get to know you better!", "icon":"img/dorie.jpg"},"emily":{"handle":"@starrybrandon","note":"emily! honestly? my little sister. i love you girl, and i love screaming about dan and all the other pasty white dudes we stan. i\'m so proud of u and i can\'t wait to see all the amazing stuff you\'re gonna do in your life","icon":"img/emily.jpg"}}'
+                   /* json='{"dorie":{"handle":"@ronnievanngucci", "note":"dorie! i think we\'ve been following each other for like two weeks max, but you\'re so cool and like you said, i love that you love niall and read my mind. god i can\'t wait to see that dumb song. you\'re so awesome and i can\'t wait to get to know you better!", "icon":"img/dorie.jpg","colour":"#e0bd63"},"emily":{"handle":"@starrybrandon","note":"emily! honestly? my little sister. i love you girl, and i love screaming about dan and all the other pasty white dudes we stan. i\'m so proud of u and i can\'t wait to see all the amazing stuff you\'re gonna do in your life","icon":"img/emily.jpg","colour":"#a9abde"}}'
                     json=JSON.parse(json)*/
                    var names= _.keys(json)
                    console.log(names)
@@ -54,7 +54,7 @@
                 var info=json[name]
                 $("#names").hide()
             $("#note").show();
-                $("#note").append("<img src='"+info.icon+"' class='icon' style='border-color:green'></br><h2>"+name+"</h2><h4>"+info.handle+"</h4><p>"+info.note+"</p></br><div class='btn back' onclick='back()'><span class='glyphicon glyphicon-menu-left arrow'></span> go back!</div>")
+                $("#note").append("<img src='"+info.icon+"' class='icon' style='border-color:"+info.colour+"'></br><h2>"+name+"</h2><h4 style='color:"+info.colour+"'>"+info.handle+"</h4><p>"+info.note+"</p></br><div class='btn back' onclick='back()'><span class='glyphicon glyphicon-menu-left arrow'></span> go back!</div>")
 
             }
 
