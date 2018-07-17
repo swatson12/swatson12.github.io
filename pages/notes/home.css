@@ -44,16 +44,15 @@ body{
 }
 
 .btn{
-    border:white 2px solid;
+    border:#f171da 2px solid;
     background-color: black;
     padding:10px;
     margin:15px;
 }
 
 .btn:hover{
-    background-color: white;
-    border:black 2px solid;
-    color:black;
+    border:#989dfc 2px solid;
+    color:#989dfc;
 }
 
 #note p{
