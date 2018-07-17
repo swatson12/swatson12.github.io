@@ -3,7 +3,7 @@ body{
     color:white;
 }
 #names,#note{
-    padding-top:5%;
+    padding-top:2%;
     text-align: center;
     margin:0 auto;
 }
@@ -13,19 +13,12 @@ body{
     border:white 2px solid;
     margin:5px;
 }
-#created{
-    float:right;
-    clear:left;
-    color:white;
-    text-align: center;
-    margin-top:1%;
-}
 
 #created{
     color:white;
     bottom:30px;
-    right:-10px;
-    position:fixed;
+    right:-150px;
+        position:fixed;
   }
   #created img{
     width:25%;
@@ -47,7 +40,10 @@ body{
     border:#f171da 2px solid;
     background-color: black;
     padding:10px;
-    margin:15px;
+    margin-bottom:15px;
+    margin-top:15px;
+    text-align: center;
+    color:white;
 }
 
 .btn:hover{
@@ -56,18 +52,5 @@ body{
 }
 
 #note p{
-    width:80%;
     margin:0 auto;
-}
-
-@media only screen and (min-width:1000px) {
-    .icon{
-        width:25%;
-    }
-    #note p{
-        width:25%;
-    }
-    #names,#note{
-        padding-top:2%;
-    }
 }
