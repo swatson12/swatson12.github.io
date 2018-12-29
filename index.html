@@ -2,111 +2,78 @@
 <html>
 
 <head>
-	<title>Sam Watson - Online Portfolio</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="css/home.css">-->
-	<link rel="stylesheet" type="text/css" href="css/new.css">
+	<title>Sam Watson</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
 
-	<link rel="icon" type="image/jpg" href="images/bg.png">
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	 crossorigin="anonymous"></script>
+	<script src="bootstrap.bundle.min.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+	<script src="jquery.js"></script>
 
-<body class="hidden">
-	<!--<img src="images/loading.gif" id="loading">-->
-
-	<section class="content" id="image">
-		<h1>Sam Watson</h1>
-		<nav id="uh">
-		<subtitle>bachelor of it student</subtitle>
-		</nav>
-		<span class="glyphicon glyphicon-menu-down arrow"></span>
-	</section>
-	<div id='header'>
-		<h1>Sam Watson</h1>
-	</div>
-	
-	<section id="second"><div class="container">
-  <div class="row">
-		<div id='accordian'>
-			 <div class="col-sm">
-			<button class="accordion">About</button>
-			<div class="panel">I'm Samantha Watson. I'm about to graduate from the Bachelor of Information Technology at Otago Polytechnic. For the last year and a half I have been focused mostly on web and Android development through the Third Year Project part of the degree. I'm enthusastic about my work and I really enjoy learning new wyas of achieving goals and I'm good at adapting to any circumstance. </div></div>
-
- <div class="col-sm">
-			<button class="accordion">Main Projects</button>
-			<div class="panel">
-				I have worked on a number of projects through the Third Year Project and extracurricular work.
-				<ul>
-					<li><b><a href="https://swatson12.github.io/jacinta-and-seans-wedding">Jacinta and Sean's Wedding</a></b> - I created this single page site for my friends who are getting married next May in Rarotonga. They wanted a different way of informing their guests of what was happening for their wedding. </li>
-					<li><b><a href="https://swatson12.github.io/pages/notes/index.html">Nice Notes</a></b> - In early 2018, my friends and I were complimenting each other, and instead of writing down what I had to say and taking a picture of it, I created this single page site to say what I wanted. I made a JSON file that was read into the page and dynamically created the entries. </li>
-					<li><b><a href="https://shar.es/an2U41">ODT article about AYA App</a></b> - As a part of the Third Year Project, I was involved with helping develop a prototype of an app that the Design School at Otago Polytechnic had designed. The app is aimed at youth who have had a terminal illness and are going overseas. The app holds their medical information so if something were to happen while overseas, they'd have their information readily accessible. Martn Kean, the Design School Lecturer and I were interviewed by the Otago Daily Times during Tech Week about the app.</li>
-					<li><b>Dot</b> - for Tech Week 2018, myself and three others were asked to make a robot that asked questions and recorded people's answers. We had about 4 weeks before Tech Week to get the robot working, so instead of having complicated parts, we had the robot be controlled by an Arduino, and an Android app for the recording and talking part. My focus was the app and what we created ended up being pretty awesome.</lu>
-			</div>
-			</div>
-
- <div class="col-sm">
-			<button class="accordion">Contact</button>
-			<div class="panel">Feel free to get in contact with me:
-				<ul><li>Phone number: <a href="tel:+64273854182">027 385 4182</a></li>
-				<li>Email: <a href="mailto:watson.sammy@gmail.com">watson.sammy@gmail.com</a></li></ul>
-			</div>
-		</div></div></div></div>
-	</section>
-
-
-
-
-	<script>
-		$(document).ready(function () {
-			$("body").fadeIn(1000).removeClass("hidden")
-			$("#second").css("padding-top", $('#image').height())
-			//$("#second").css('height', $('#image').height())
-
-		})
-
-		$(".arrow").click(function (){
-			console.log("SCROLL")
-			$('html, body').animate({
-				scrollTop:$(".container").offset().top
-			},1000)
-
-		
-		})
-
-
-		$(window).scroll(function (e) {
-			if (($(this).scrollTop()) < ($('#image').height() - 100)) {
-				$("#accordian").show()
-				$("#accordian").fadeIn(1000)
-			}
-			
-		})
-
-		/*accordian*/
-		var acc = document.getElementsByClassName("accordion");
-
-		for (var i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function () {
-				this.classList.toggle("active");
-				var panel = this.nextElementSibling;
-				if (panel.style.display === "block") {
-					panel.style.display = "none";
-				} else {
-					panel.style.display = "block";
-				}
-			});
+	<style>
+		.bg {
+			background-image: url(bg.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 
+		table {
+			border-collapse: separate;
+			border-spacing: 10px;
+			padding: 15px;
+			background: rgba(236, 224, 212, 0.65);
+			border-radius: 50%;
+			margin: 0 auto;
+			margin-top: 45%;
+		}
 
+		td {
+			width: 400px;
+			height: 400px;
+			border-radius: 50%;
+			border: 2px #997a0f solid;
+		}
 
+		.centered {
+			text-align: center;
+		}
 
-	</script>
+		.header {
+			margin-bottom: 0;
+
+		}
+
+		.circle-header {
+			padding-bottom: 2%;
+			margin-bottom: 2%;
+			border-bottom: 2px solid #997a0f;
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+	</style>
+
+</head>
+
+<body class="bg">
+	<div class="container-fluid">
+		<div class="row align-items-center justify-content-center">
+			<div class="col"></div>
+			<div class="col centered">
+				<table>
+					<tr>
+						<td>
+							<h2 class="circle-header">Sam Watson</h2>
+							<span>This page is under construction <br>but it'll be back soon!</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>
+
+	<script></script>
 </body>
 
 </html>
