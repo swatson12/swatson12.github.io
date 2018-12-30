@@ -17,16 +17,11 @@
 			src: url(main.otf);
 		}
 
-		.bg {
-			display: none;
-		}
 
-		/*.bg {
-			background-image: url(bg.jpg);
+		.bg {
 			background-size: cover;
 			background-repeat: no-repeat;
-			height: max-content;
-		}*/
+		}
 
 		table {
 			border-collapse: separate;
@@ -99,10 +94,12 @@
 	<script>
 		$(function () {
 			var bgimage = new Image();
-			bgimage.src = "http://placeimg.com/760/460/tech";
+			bgimage.src = "bg.jpg";
 
-			$(bgimage).load(function () {
-				$(".bg").css("background-image", "url(" + $(this).attr("src") + ")").fadeIn('slow');
+			$(bgimage).load("bg.jpg", function () {
+				console.log("it loaded")
+				$(".bg").css("background-image", "url(" + bgimage.src + ")").fadeIn('slow');
+
 			});
 		});
 	</script>
