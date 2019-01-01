@@ -68,9 +68,7 @@
 
 </head>
 
-<!--<body class="bg">-->
-
-<body>
+<body class="bg">
 	<div class="container-fluid bg">
 		<div class="row align-items-center justify-content-center">
 			<div class="col"></div>
@@ -94,11 +92,15 @@
 	<script>
 		$(function () {
 			var bgimage = new Image();
-			bgimage.src = "bg.jpg";
-
+			bgimage.src = "bg.jpg"
+			$(".bg").hide()
 			$(bgimage).load("bg.jpg", function () {
 				console.log("it loaded")
-				$(".bg").css("background-image", "url(" + bgimage.src + ")").fadeIn('slow');
+				$(".bg").css("background-image", "url(" + bgimage.src + ")")
+
+			}).after(function () {
+				console.log("should load in now!")
+				$(".bg").fadeIn('slow')
 
 			});
 		});
