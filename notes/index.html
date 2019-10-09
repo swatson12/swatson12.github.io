@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Victim Notes!</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/968542464444284928/AnIa2Oh2_bigger.jpg">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="home.css">
+        
+        <script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="underscore.min.js"></script>
+    </head>
+
+    <body>
+        <div id="created"> <img src="./img/me.jpg"><br>created by <a href="https://twitter.com/keepitin_line">sam</a></div><br>
+        <div id="names"></div>
+        <div id="note"></div>
+        <script async>
+            var json;
+            $("#note").hide();
+            $(window).on('load', function(){
+                $.getJSON("data.json", function(data){
+                    json=data
+                }).done(function(){
+                    console.log("done!")
+                   var names= _.keys(json)
+                    for(var t in names ){
+                        $('#names').append("<div class='btn' value='"+names[t]+"' id='"+names[t]+"' onclick='btnClick(\""+names[t]+"\")'>"+names[t]+"</div></br>")
+                    }
+                   
+                })
+            })
+
+            function btnClick(name){
+                var info=json[name]
+                $("#names").hide()
+            $("#note").show();
+                $("#note").append("<img src='"+info.icon+"' class='icon'></br><h2>"+name+"</h2><h4>"+info.handle+"</h4><p>"+info.note+"</p></br><div class='btn back' onclick='back()'><span class='glyphicon glyphicon-menu-left arrow'></span> go back!</div>")
+            }
+
+            function back(){
+            $("#note").hide().html("");
+            
+            $("#names").show();
+
+            }
+
+
+        </script>
+    </body>
+</html>
